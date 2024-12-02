@@ -20,6 +20,9 @@ public class TelaAtualizarFuncionarioController {
     private Button btnatualizarFun;
 
     @FXML
+    private TextField tfAtualizarId;
+
+    @FXML
     private Button btnsairatualizarFun;
 
     @FXML

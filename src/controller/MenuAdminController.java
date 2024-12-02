@@ -44,7 +44,7 @@ public class MenuAdminController {
     @FXML
     void btnadautualizarveiculoclick(ActionEvent event) throws IOException {
         
-        URL url = getClass().getResource("/view/TelaAtualizarVeiculo.fxml");
+        URL url = getClass().getResource("/view/TelaAtualizar.fxml");
         Parent root = FXMLLoader.load(url);
 
         Stage stgVendas = new Stage();
@@ -145,7 +145,7 @@ public class MenuAdminController {
     @FXML
     void btnlistarfunclick(ActionEvent event) throws IOException {
 
-        URL url = getClass().getResource("/view/TelaLIstaFuncionario.fxml");
+        URL url = getClass().getResource("/view/TelaListarFuncionario.fxml");
         Parent root = FXMLLoader.load(url);
 
         Stage stgVendas = new Stage();
