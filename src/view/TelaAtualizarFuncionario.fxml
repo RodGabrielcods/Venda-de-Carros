@@ -8,6 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="781.0" prefWidth="1205.0" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaAtualizarFuncionarioController">
@@ -26,88 +27,6 @@
             </Label>
          </children>
       </Pane>
-      <HBox layoutX="552.0" layoutY="222.0" prefHeight="66.0" prefWidth="461.0">
-         <children>
-            <Label text="Nome:">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="51.0" />
-               </font>
-            </Label>
-            <TextField fx:id="tfatualizarNome" prefHeight="46.0" prefWidth="219.0">
-               <HBox.margin>
-                  <Insets bottom="10.0" left="10.0" top="10.0" />
-               </HBox.margin>
-               <padding>
-                  <Insets bottom="10.0" />
-               </padding>
-            </TextField>
-         </children>
-      </HBox>
-      <HBox layoutX="552.0" layoutY="288.0" prefHeight="66.0" prefWidth="548.0">
-         <children>
-            <Label text="Endereço: ">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="51.0" />
-               </font>
-            </Label>
-            <TextField fx:id="tfatualizarEndereco" prefHeight="49.0" prefWidth="218.0">
-               <padding>
-                  <Insets bottom="10.0" />
-               </padding>
-               <HBox.margin>
-                  <Insets bottom="10.0" top="10.0" />
-               </HBox.margin>
-            </TextField>
-         </children>
-      </HBox>
-      <HBox layoutX="549.0" layoutY="358.0" prefHeight="66.0" prefWidth="640.0">
-         <children>
-            <Label text="CPF:">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="43.0" />
-               </font>
-            </Label>
-            <TextField fx:id="tfatualizarCPF" prefHeight="39.0" prefWidth="164.0">
-               <padding>
-                  <Insets bottom="10.0" />
-               </padding>
-               <HBox.margin>
-                  <Insets bottom="10.0" left="28.0" top="10.0" />
-               </HBox.margin>
-            </TextField>
-         </children>
-      </HBox>
-      <HBox layoutX="552.0" layoutY="427.0" prefHeight="66.0" prefWidth="565.0">
-         <children>
-            <Label prefHeight="60.0" prefWidth="259.0" text="Telefone:">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="51.0" />
-               </font>
-            </Label>
-            <TextField fx:id="tfatualizarTelefone" prefHeight="46.0" prefWidth="224.0">
-               <padding>
-                  <Insets bottom="10.0" />
-               </padding>
-               <HBox.margin>
-                  <Insets bottom="10.0" top="10.0" />
-               </HBox.margin>
-            </TextField>
-         </children>
-      </HBox>
-      <HBox layoutX="552.0" layoutY="493.0" prefHeight="66.0" prefWidth="565.0">
-         <children>
-            <Label prefHeight="60.0" prefWidth="329.0" text="Data Nascimento:">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="37.0" />
-               </font>
-            </Label>
-            <DatePicker fx:id="dtatualizarData" prefHeight="44.0" prefWidth="193.0">
-               <HBox.margin>
-                  <Insets top="10.0" />
-               </HBox.margin>
-            </DatePicker>
-         </children>
-      </HBox>
       <Label layoutX="698.0" layoutY="44.0" text="Informações" textFill="#0088ff">
          <font>
             <Font name="Arial Rounded MT Bold" size="51.0" />
@@ -128,5 +47,111 @@
             <Font name="Arial Rounded MT Bold" size="49.0" />
          </font>
       </Label>
+      <VBox layoutX="531.0" layoutY="170.0" prefHeight="473.0" prefWidth="865.0">
+         <children>
+            <HBox prefHeight="66.0" prefWidth="461.0">
+               <children>
+                  <Label text="Nome:">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="51.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfatualizarNome" prefHeight="46.0" prefWidth="399.0">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="66.0" prefWidth="548.0">
+               <children>
+                  <Label text="Endereço: ">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="51.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfatualizarEndereco" prefHeight="46.0" prefWidth="303.0">
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="66.0" prefWidth="640.0">
+               <children>
+                  <Label text="CPF:">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="43.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <TextField fx:id="tfatualizarCPF" prefHeight="39.0" prefWidth="444.0">
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="28.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="66.0" prefWidth="565.0">
+               <children>
+                  <Label prefHeight="60.0" prefWidth="259.0" text="Telefone:">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="51.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfatualizarTelefone" prefHeight="46.0" prefWidth="313.0">
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="66.0" prefWidth="685.0">
+               <children>
+                  <Label prefHeight="60.0" prefWidth="379.0" text="Data Nascimento:">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="43.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="dtatualizarData" prefHeight="44.0" prefWidth="193.0">
+                     <HBox.margin>
+                        <Insets top="10.0" />
+                     </HBox.margin>
+                  </DatePicker>
+               </children>
+            </HBox>
+            <HBox prefHeight="103.0" prefWidth="198.0">
+               <children>
+                  <Label text="ID:">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="51.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="tfatualizarID" prefHeight="46.0" prefWidth="498.0">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                  </TextField>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>

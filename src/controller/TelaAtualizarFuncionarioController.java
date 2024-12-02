@@ -35,6 +35,9 @@ public class TelaAtualizarFuncionarioController {
     private TextField tfatualizarEndereco;
 
     @FXML
+    private TextField tfatualizarID;
+
+    @FXML
     private TextField tfatualizarNome;
 
     @FXML
