@@ -42,7 +42,7 @@ public class TelaCadastrarFuncionarioController {
     @FXML
     void btnsaircadastrarfuncionarioclick(ActionEvent event) throws IOException {
 
-        URL url = getClass().getResource("/view/TelaMenu.fxml");
+        URL url = getClass().getResource("/view/MenuAdmin.fxml");
         Parent root = FXMLLoader.load(url);
 
         Stage stgVendas = new Stage();

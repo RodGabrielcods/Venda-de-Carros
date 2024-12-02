@@ -10,42 +10,43 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.stage.Stage;
 
-public class TelaCarrosController {
+public class TelaListarFuncionarioController {
 
     @FXML
-    private Button btnadmin;
+    private Button btnListaFun;
 
     @FXML
-    private Button btnvai;
+    private Button btnsairListaFun;
 
     @FXML
-    private TextField tfsenha;
+    private TableColumn<?, ?> colCPF;
 
     @FXML
-    private TextField tfuser;
+    private TableColumn<?, ?> colDataNascimento;
 
     @FXML
-    void btncadastrar(ActionEvent event) throws IOException {
+    private TableColumn<?, ?> colEndereco;
 
+    @FXML
+    private TableColumn<?, ?> colNome;
 
-        URL url = getClass().getResource("/view/TelaMenu.fxml");
-        Parent root = FXMLLoader.load(url);
+    @FXML
+    private TableColumn<?, ?> colTelefone;
 
-        Stage stgVendas = new Stage();
-        stgVendas.setTitle("Menu");
-        stgVendas.setScene(new Scene(root));
-        stgVendas.show();
+    @FXML
+    private TableView<?> tbFuncionario;
 
-        Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        telaAtual.close();
+    @FXML
+    void btnListaFunclick(ActionEvent event) {
 
     }
 
     @FXML
-    void btnadminclick(ActionEvent event) throws IOException {
+    void btnsairListaFunclick(ActionEvent event) throws IOException {
 
         URL url = getClass().getResource("/view/MenuAdmin.fxml");
         Parent root = FXMLLoader.load(url);
@@ -57,6 +58,7 @@ public class TelaCarrosController {
 
         Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
         telaAtual.close();
+
 
     }
 

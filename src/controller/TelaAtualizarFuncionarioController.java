@@ -10,42 +10,40 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class TelaCarrosController {
+public class TelaAtualizarFuncionarioController {
 
     @FXML
-    private Button btnadmin;
+    private Button btnatualizarFun;
 
     @FXML
-    private Button btnvai;
+    private Button btnsairatualizarFun;
 
     @FXML
-    private TextField tfsenha;
+    private DatePicker dtatualizarData;
 
     @FXML
-    private TextField tfuser;
+    private TextField tfatualizarCPF;
 
     @FXML
-    void btncadastrar(ActionEvent event) throws IOException {
+    private TextField tfatualizarEndereco;
 
+    @FXML
+    private TextField tfatualizarNome;
 
-        URL url = getClass().getResource("/view/TelaMenu.fxml");
-        Parent root = FXMLLoader.load(url);
+    @FXML
+    private TextField tfatualizarTelefone;
 
-        Stage stgVendas = new Stage();
-        stgVendas.setTitle("Menu");
-        stgVendas.setScene(new Scene(root));
-        stgVendas.show();
-
-        Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        telaAtual.close();
+    @FXML
+    void btnatualizarFunclick(ActionEvent event) {
 
     }
 
     @FXML
-    void btnadminclick(ActionEvent event) throws IOException {
+    void btnsairatualizarFunclick(ActionEvent event) throws IOException {
 
         URL url = getClass().getResource("/view/MenuAdmin.fxml");
         Parent root = FXMLLoader.load(url);

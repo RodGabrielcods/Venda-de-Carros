@@ -42,29 +42,77 @@ public class MenuAdminController {
     private Button btnremoverfun;
 
     @FXML
-    void btnadautualizarveiculoclick(ActionEvent event) {
+    void btnadautualizarveiculoclick(ActionEvent event) throws IOException {
+        
+        URL url = getClass().getResource("/view/TelaAtualizarVeiculo.fxml");
+        Parent root = FXMLLoader.load(url);
+
+        Stage stgVendas = new Stage();
+        stgVendas.setTitle("Menu");
+        stgVendas.setScene(new Scene(root));
+        stgVendas.show();
+
+        Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        telaAtual.close();
+
 
     }
 
     @FXML
-    void btnadcadastrarveiculoclick(ActionEvent event) {
+    void btnadcadastrarveiculoclick(ActionEvent event) throws IOException {
+
+        URL url = getClass().getResource("/view/TelaCadastroVeiculo.fxml");
+        Parent root = FXMLLoader.load(url);
+
+        Stage stgVendas = new Stage();
+        stgVendas.setTitle("Menu");
+        stgVendas.setScene(new Scene(root));
+        stgVendas.show();
+
+        Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        telaAtual.close();
+
 
     }
 
     @FXML
-    void btnadlistarveiculoclick(ActionEvent event) {
+    void btnadlistarveiculoclick(ActionEvent event) throws IOException {
+
+        URL url = getClass().getResource("/view/TelaEstoque.fxml");
+        Parent root = FXMLLoader.load(url);
+
+        Stage stgVendas = new Stage();
+        stgVendas.setTitle("Menu");
+        stgVendas.setScene(new Scene(root));
+        stgVendas.show();
+
+        Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        telaAtual.close();
+
 
     }
 
     @FXML
-    void btnadremoverveiculoclick(ActionEvent event) {
+    void btnadremoverveiculoclick(ActionEvent event) throws IOException {
+
+        URL url = getClass().getResource("/view/TelaRemoverVeiculo.fxml");
+        Parent root = FXMLLoader.load(url);
+
+        Stage stgVendas = new Stage();
+        stgVendas.setTitle("Menu");
+        stgVendas.setScene(new Scene(root));
+        stgVendas.show();
+
+        Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        telaAtual.close();
+
 
     }
 
     @FXML
     void btnadvoltarclick(ActionEvent event) throws IOException {
 
-        URL url = getClass().getResource("/view/TelaMenu.fxml");
+        URL url = getClass().getResource("/view/TelaCarros.fxml");
         Parent root = FXMLLoader.load(url);
 
         Stage stgVendas = new Stage();
@@ -78,22 +126,71 @@ public class MenuAdminController {
     }
 
     @FXML
-    void btnatualizarfunclick(ActionEvent event) {
+    void btnatualizarfunclick(ActionEvent event) throws IOException {
+
+        URL url = getClass().getResource("/view/TelaAtualizarFuncionario.fxml");
+        Parent root = FXMLLoader.load(url);
+
+        Stage stgVendas = new Stage();
+        stgVendas.setTitle("Atualizar Dados");
+        stgVendas.setScene(new Scene(root));
+        stgVendas.show();
+
+        Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        telaAtual.close();
+
 
     }
 
     @FXML
-    void btnlistarfunclick(ActionEvent event) {
+    void btnlistarfunclick(ActionEvent event) throws IOException {
+
+        URL url = getClass().getResource("/view/TelaLIstaFuncionario.fxml");
+        Parent root = FXMLLoader.load(url);
+
+        Stage stgVendas = new Stage();
+        stgVendas.setTitle("Lista deFuncionario");
+        stgVendas.setScene(new Scene(root));
+        stgVendas.show();
+
+        Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        telaAtual.close();
+
 
     }
 
     @FXML
-    void btnnovofunclick(ActionEvent event) {
+    void btnnovofunclick(ActionEvent event) throws IOException {
+
+        URL url = getClass().getResource("/view/TelaCadastrarFuncionario.fxml");
+        Parent root = FXMLLoader.load(url);
+
+        Stage stgVendas = new Stage();
+        stgVendas.setTitle("Menu");
+        stgVendas.setScene(new Scene(root));
+        stgVendas.show();
+
+        Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        telaAtual.close();
+
 
     }
 
     @FXML
-    void btnremoverfunclick(ActionEvent event) {
+    void btnremoverfunclick(ActionEvent event) throws IOException {
+        
+        URL url = getClass().getResource("/view/TelaRemoverFuncionario.fxml");
+        Parent root = FXMLLoader.load(url);
+
+        Stage stgVendas = new Stage();
+        stgVendas.setTitle("Tela Remover Funcionario");
+        stgVendas.setScene(new Scene(root));
+        stgVendas.show();
+
+        Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        telaAtual.close();
+
+
 
     }
 
