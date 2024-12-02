@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="667.0" prefWidth="1022.0" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuAdminController">
+   <children>
+      <Pane prefHeight="667.0" prefWidth="378.0" style="-fx-background-color: #007cf8;">
+         <children>
+            <Label layoutX="123.0" layoutY="257.0" text="Menu" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="50.0" />
+               </font>
+            </Label>
+            <Label layoutX="39.0" layoutY="307.0" text="Administrador">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="45.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnadvoltar" layoutX="127.0" layoutY="487.0" mnemonicParsing="false" onAction="#btnadvoltarclick" style="-fx-background-color: red; -fx-background-radius: 100;" text="Voltar" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="29.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Button fx:id="btnadlistarveiculo" layoutX="628.0" layoutY="561.0" mnemonicParsing="false" onAction="#btnadlistarveiculoclick" style="-fx-background-color: #007cf8; -fx-background-radius: 100;" text="Estoque" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="29.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnadautualizarveiculo" layoutX="817.0" layoutY="488.0" mnemonicParsing="false" onAction="#btnadautualizarveiculoclick" style="-fx-background-color: #007cf8; -fx-background-radius: 100;" text="Atualizar " textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="29.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnadremoverveiculo" layoutX="618.0" layoutY="488.0" mnemonicParsing="false" onAction="#btnadremoverveiculoclick" style="-fx-background-color: #007cf8; -fx-background-radius: 100;" text="Remover " textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="29.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnlistarfun" contentDisplay="CENTER" layoutX="612.0" layoutY="197.0" mnemonicParsing="false" onAction="#btnlistarfunclick" prefHeight="54.0" prefWidth="173.0" style="-fx-background-color: #007cf8; -fx-background-radius: 100;" text="Listar" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="29.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnnovofun" layoutX="401.0" layoutY="126.0" mnemonicParsing="false" onAction="#btnnovofunclick" prefHeight="54.0" prefWidth="147.0" style="-fx-background-color: #007cf8; -fx-background-radius: 100;" text="Novo " textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="29.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnremoverfun" layoutX="608.0" layoutY="126.0" mnemonicParsing="false" onAction="#btnremoverfunclick" prefHeight="54.0" prefWidth="180.0" style="-fx-background-color: #007cf8; -fx-background-radius: 100;" text="Remover " textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="29.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnatualizarfun" contentDisplay="CENTER" layoutX="826.0" layoutY="126.0" mnemonicParsing="false" onAction="#btnatualizarfunclick" prefHeight="54.0" prefWidth="173.0" style="-fx-background-color: #007cf8; -fx-background-radius: 100;" text="Atualizar " textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="29.0" />
+         </font>
+      </Button>
+      <Label layoutX="574.0" layoutY="21.0" text="Funcionario">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="45.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnadcadastrarveiculo" layoutX="401.0" layoutY="488.0" mnemonicParsing="false" onAction="#btnadcadastrarveiculoclick" style="-fx-background-color: #007cf8; -fx-background-radius: 100;" text="Cadastrar" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="29.0" />
+         </font>
+      </Button>
+      <Label layoutX="616.0" layoutY="369.0" text="Veiculo">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="45.0" />
+         </font>
+      </Label>
+      <Pane layoutX="375.0" layoutY="330.0" prefHeight="8.0" prefWidth="649.0" style="-fx-background-color: black;" />
+   </children>
+</AnchorPane>
