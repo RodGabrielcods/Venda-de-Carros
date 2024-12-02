@@ -27,6 +27,9 @@ public class TelaEstoqueController {
 
     @FXML
     private TableColumn<?, ?> colCor;
+    
+    @FXML
+    private TableColumn<?, ?> colIDCar;
 
     @FXML
     private TableColumn<?, ?> colMarca;

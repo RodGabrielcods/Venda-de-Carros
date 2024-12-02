@@ -32,6 +32,9 @@ public class TelaListarFuncionarioController {
     private TableColumn<?, ?> colEndereco;
 
     @FXML
+    private TableColumn<?, ?> colIDFun;
+
+    @FXML
     private TableColumn<?, ?> colNome;
 
     @FXML
