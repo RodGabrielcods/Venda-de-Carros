@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="810.0" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaCarrosController">
+   <children>
+      <VBox layoutX="491.0" layoutY="149.0" prefHeight="249.0" prefWidth="243.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="53.0" prefWidth="282.0" text="Login" textFill="#0064ff">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="41.0" />
+               </font>
+               <padding>
+                  <Insets bottom="20.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="tfuser" prefHeight="30.0" prefWidth="243.0" style="-fx-border-style: solid; -fx-border-width: 2px; -fx-border-color: #0077ff;">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <padding>
+                  <Insets bottom="1.0" />
+               </padding>
+            </TextField>
+            <Label alignment="CENTER" prefHeight="53.0" prefWidth="289.0" text="PASSWORD" textFill="#0064ff">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="41.0" />
+               </font>
+               <padding>
+                  <Insets bottom="20.0" top="20.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="tfsenha" prefHeight="28.0" prefWidth="243.0" style="-fx-border-style: solid; -fx-border-width: 2px; -fx-border-color: #0077ff;">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <padding>
+                  <Insets bottom="1.0" />
+               </padding>
+            </TextField>
+         </children>
+      </VBox>
+      <Label layoutX="593.0" layoutY="67.0" text="User " textFill="#008dff">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="47.0" />
+         </font>
+      </Label>
+      <Pane prefHeight="475.0" prefWidth="349.0" style="-fx-background-color: #0077ff;">
+         <children>
+            <ImageView fitHeight="249.0" fitWidth="270.0" layoutX="26.0" layoutY="128.0">
+               <image>
+                  <Image url="@../../../../../Downloads/pngegg.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <ImageView fitHeight="33.0" fitWidth="36.0" layoutX="448.0" layoutY="215.0">
+         <image>
+            <Image url="@../../../../../Downloads/pngegg%20(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="33.0" fitWidth="36.0" layoutX="448.0" layoutY="334.0">
+         <image>
+            <Image url="@../../../../../Downloads/pngegg%20(2).png" />
+         </image>
+      </ImageView>
+      <Label layoutX="517.0" layoutY="14.0" text=" Login">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="51.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnvai" layoutX="562.0" layoutY="390.0" mnemonicParsing="false" onAction="#btncadastrar" style="-fx-background-color: #00dcff; -fx-background-radius: 50px;" text="Enter" textFill="#005eff">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="25.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

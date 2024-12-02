@@ -1,0 +1,17 @@
+{
+	"java.project.sourcePaths": [
+		"src"
+	],
+	"java.project.outputPath": "bin",
+	"java.project.referencedLibraries": [
+		"lib/**/*.jar",
+		"C:/Users/3028305/Documents/Java com GBD/openjfx-21.0.5_windows-x64_bin-sdk/javafx-sdk-21.0.5/lib/javafx.base.jar",
+		"C:/Users/3028305/Documents/Java com GBD/openjfx-21.0.5_windows-x64_bin-sdk/javafx-sdk-21.0.5/lib/javafx.controls.jar",
+		"C:/Users/3028305/Documents/Java com GBD/openjfx-21.0.5_windows-x64_bin-sdk/javafx-sdk-21.0.5/lib/javafx.fxml.jar",
+		"C:/Users/3028305/Documents/Java com GBD/openjfx-21.0.5_windows-x64_bin-sdk/javafx-sdk-21.0.5/lib/javafx.graphics.jar",
+		"C:/Users/3028305/Documents/Java com GBD/openjfx-21.0.5_windows-x64_bin-sdk/javafx-sdk-21.0.5/lib/javafx.media.jar",
+		"C:/Users/3028305/Documents/Java com GBD/openjfx-21.0.5_windows-x64_bin-sdk/javafx-sdk-21.0.5/lib/javafx.swing.jar",
+		"C:/Users/3028305/Documents/Java com GBD/openjfx-21.0.5_windows-x64_bin-sdk/javafx-sdk-21.0.5/lib/javafx.web.jar",
+		"C:/Users/3028305/Documents/Java com GBD/openjfx-21.0.5_windows-x64_bin-sdk/javafx-sdk-21.0.5/lib/javafx-swt.jar"
+	]
+}
