@@ -47,7 +47,7 @@ public class TelaMenuController {
         Parent root = FXMLLoader.load(url);
 
         Stage stgCadastro = new Stage();
-        stgCadastro.setTitle("Atualizar Dados");
+        stgCadastro.setTitle("Cadastro Veiculo");
         stgCadastro.setScene(new Scene (root));
         stgCadastro.show();
 
@@ -62,7 +62,7 @@ public class TelaMenuController {
         Parent root = FXMLLoader.load(url);
 
         Stage sgtEstoque = new Stage();
-        sgtEstoque.setTitle("Atualizar Dados");
+        sgtEstoque.setTitle("Veiculos em Estoque");
         sgtEstoque.setScene(new Scene (root));
         sgtEstoque.show();
 
@@ -76,10 +76,10 @@ public class TelaMenuController {
         URL url = getClass().getResource("/view/TelaCarros.fxml");
         Parent root = FXMLLoader.load(url);
 
-        Stage sgtEstoque = new Stage();
-        sgtEstoque.setTitle("Atualizar Dados");
-        sgtEstoque.setScene(new Scene (root));
-        sgtEstoque.show();
+        Stage stgLogin = new Stage();
+        stgLogin.setTitle("Login");
+        stgLogin.setScene(new Scene (root));
+        stgLogin.show();
 
         Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
         telaAtual.close();

@@ -47,10 +47,10 @@ public class MenuAdminController {
         URL url = getClass().getResource("/view/TelaAtualizar.fxml");
         Parent root = FXMLLoader.load(url);
 
-        Stage stgVendas = new Stage();
-        stgVendas.setTitle("Menu");
-        stgVendas.setScene(new Scene(root));
-        stgVendas.show();
+        Stage stgAtualizar = new Stage();
+        stgAtualizar.setTitle("Tela Atualizar");
+        stgAtualizar.setScene(new Scene(root));
+        stgAtualizar.show();
 
         Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
         telaAtual.close();
@@ -64,10 +64,10 @@ public class MenuAdminController {
         URL url = getClass().getResource("/view/TelaCadastroVeiculo.fxml");
         Parent root = FXMLLoader.load(url);
 
-        Stage stgVendas = new Stage();
-        stgVendas.setTitle("Menu");
-        stgVendas.setScene(new Scene(root));
-        stgVendas.show();
+        Stage stgCadastroVeiculo = new Stage();
+        stgCadastroVeiculo.setTitle("Tela Cadastro Veiculo");
+        stgCadastroVeiculo.setScene(new Scene(root));
+        stgCadastroVeiculo.show();
 
         Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
         telaAtual.close();
@@ -81,10 +81,10 @@ public class MenuAdminController {
         URL url = getClass().getResource("/view/TelaEstoque.fxml");
         Parent root = FXMLLoader.load(url);
 
-        Stage stgVendas = new Stage();
-        stgVendas.setTitle("Menu");
-        stgVendas.setScene(new Scene(root));
-        stgVendas.show();
+        Stage stgEstoque = new Stage();
+        stgEstoque.setTitle("Tela Estoque");
+        stgEstoque.setScene(new Scene(root));
+        stgEstoque.show();
 
         Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
         telaAtual.close();
@@ -98,10 +98,10 @@ public class MenuAdminController {
         URL url = getClass().getResource("/view/TelaRemoverVeiculo.fxml");
         Parent root = FXMLLoader.load(url);
 
-        Stage stgVendas = new Stage();
-        stgVendas.setTitle("Menu");
-        stgVendas.setScene(new Scene(root));
-        stgVendas.show();
+        Stage stgRemover = new Stage();
+        stgRemover.setTitle("Tela Remover veiculo");
+        stgRemover.setScene(new Scene(root));
+        stgRemover.show();
 
         Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
         telaAtual.close();
@@ -115,10 +115,10 @@ public class MenuAdminController {
         URL url = getClass().getResource("/view/TelaCarros.fxml");
         Parent root = FXMLLoader.load(url);
 
-        Stage stgVendas = new Stage();
-        stgVendas.setTitle("Menu");
-        stgVendas.setScene(new Scene(root));
-        stgVendas.show();
+        Stage StgLogin = new Stage();
+        StgLogin.setTitle("Login");
+        StgLogin.setScene(new Scene(root));
+        StgLogin.show();
 
         Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
         telaAtual.close();
@@ -131,10 +131,10 @@ public class MenuAdminController {
         URL url = getClass().getResource("/view/TelaAtualizarFuncionario.fxml");
         Parent root = FXMLLoader.load(url);
 
-        Stage stgVendas = new Stage();
-        stgVendas.setTitle("Atualizar Dados");
-        stgVendas.setScene(new Scene(root));
-        stgVendas.show();
+        Stage stgAtualizarFuncionario = new Stage();
+        stgAtualizarFuncionario.setTitle("Atualizar Dados");
+        stgAtualizarFuncionario.setScene(new Scene(root));
+        stgAtualizarFuncionario.show();
 
         Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
         telaAtual.close();
@@ -148,10 +148,10 @@ public class MenuAdminController {
         URL url = getClass().getResource("/view/TelaListarFuncionario.fxml");
         Parent root = FXMLLoader.load(url);
 
-        Stage stgVendas = new Stage();
-        stgVendas.setTitle("Lista deFuncionario");
-        stgVendas.setScene(new Scene(root));
-        stgVendas.show();
+        Stage stgListaFun = new Stage();
+        stgListaFun.setTitle("Lista de Funcionario");
+        stgListaFun.setScene(new Scene(root));
+        stgListaFun.show();
 
         Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
         telaAtual.close();
@@ -165,10 +165,10 @@ public class MenuAdminController {
         URL url = getClass().getResource("/view/TelaCadastrarFuncionario.fxml");
         Parent root = FXMLLoader.load(url);
 
-        Stage stgVendas = new Stage();
-        stgVendas.setTitle("Menu");
-        stgVendas.setScene(new Scene(root));
-        stgVendas.show();
+        Stage stgCadastrarFun = new Stage();
+        stgCadastrarFun.setTitle("Tela Cadastrar Funcionario");
+        stgCadastrarFun.setScene(new Scene(root));
+        stgCadastrarFun.show();
 
         Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
         telaAtual.close();
@@ -182,10 +182,10 @@ public class MenuAdminController {
         URL url = getClass().getResource("/view/TelaRemoverFuncionario.fxml");
         Parent root = FXMLLoader.load(url);
 
-        Stage stgVendas = new Stage();
-        stgVendas.setTitle("Tela Remover Funcionario");
-        stgVendas.setScene(new Scene(root));
-        stgVendas.show();
+        Stage stgRemoverFun = new Stage();
+        stgRemoverFun.setTitle("Tela Remover Funcionario");
+        stgRemoverFun.setScene(new Scene(root));
+        stgRemoverFun.show();
 
         Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
         telaAtual.close();

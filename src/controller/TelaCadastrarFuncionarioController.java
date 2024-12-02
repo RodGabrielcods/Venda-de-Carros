@@ -45,10 +45,10 @@ public class TelaCadastrarFuncionarioController {
         URL url = getClass().getResource("/view/MenuAdmin.fxml");
         Parent root = FXMLLoader.load(url);
 
-        Stage stgVendas = new Stage();
-        stgVendas.setTitle("Menu");
-        stgVendas.setScene(new Scene(root));
-        stgVendas.show();
+        Stage stgMenuAdmin = new Stage();
+        stgMenuAdmin.setTitle("Menu Admin");
+        stgMenuAdmin.setScene(new Scene(root));
+        stgMenuAdmin.show();
 
         Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
         telaAtual.close();

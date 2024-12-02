@@ -51,10 +51,10 @@ public class TelaEstoqueController {
         URL url = getClass().getResource("/view/TelaMenu.fxml");
         Parent root = FXMLLoader.load(url);
 
-        Stage stgVendas = new Stage();
-        stgVendas.setTitle("Menu");
-        stgVendas.setScene(new Scene(root));
-        stgVendas.show();
+        Stage stgMenu = new Stage();
+        stgMenu.setTitle("Menu");
+        stgMenu.setScene(new Scene(root));
+        stgMenu.show();
 
         Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
         telaAtual.close();
