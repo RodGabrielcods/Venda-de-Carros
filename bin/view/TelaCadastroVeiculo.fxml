@@ -9,120 +9,120 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="781.0" prefWidth="1205.0" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaCadastroVeiculo">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaCadastroVeiculo">
    <children>
-      <Pane layoutY="-4.0" prefHeight="789.0" prefWidth="461.0" style="-fx-background-color: #0083ff;">
+      <Pane prefHeight="600.0" prefWidth="336.0" style="-fx-background-color: #0083ff;">
          <children>
-            <Label layoutX="58.0" layoutY="305.0" text="Cadastrar " textFill="WHITE">
+            <Label layoutX="57.0" layoutY="250.0" text="Cadastrar " textFill="WHITE">
                <font>
-                  <Font name="Arial Rounded MT Bold" size="60.0" />
+                  <Font name="Arial Rounded MT Bold" size="43.0" />
                </font>
             </Label>
-            <Label layoutX="133.0" layoutY="367.0" text="Veículo">
+            <Label layoutX="90.0" layoutY="300.0" text="Veículo">
                <font>
-                  <Font name="Arial Rounded MT Bold" size="69.0" />
+                  <Font name="Arial Rounded MT Bold" size="43.0" />
                </font>
             </Label>
          </children>
       </Pane>
-      <HBox layoutX="638.0" layoutY="222.0" prefHeight="66.0" prefWidth="461.0">
+      <HBox layoutX="362.0" layoutY="136.0" prefHeight="50.0" prefWidth="400.0">
          <children>
             <Label text="Marca:">
                <font>
-                  <Font name="Arial Rounded MT Bold" size="51.0" />
+                  <Font name="Arial Rounded MT Bold" size="30.0" />
                </font>
-            </Label>
-            <TextField fx:id="tfMarca" prefHeight="46.0" prefWidth="219.0">
                <HBox.margin>
-                  <Insets bottom="10.0" left="10.0" top="10.0" />
+                  <Insets right="5.0" />
                </HBox.margin>
-               <padding>
-                  <Insets bottom="10.0" />
-               </padding>
+            </Label>
+            <TextField fx:id="tfMarca" prefHeight="34.0" prefWidth="292.0">
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
             </TextField>
          </children>
       </HBox>
-      <HBox layoutX="638.0" layoutY="295.0" prefHeight="66.0" prefWidth="510.0">
+      <HBox layoutX="362.0" layoutY="197.0" prefHeight="50.0" prefWidth="400.0">
          <children>
             <Label text="Ano:">
                <font>
-                  <Font name="Arial Rounded MT Bold" size="51.0" />
+                  <Font name="Arial Rounded MT Bold" size="30.0" />
                </font>
-            </Label>
-            <TextField fx:id="tfAno" prefHeight="49.0" prefWidth="218.0">
-               <padding>
-                  <Insets bottom="10.0" />
-               </padding>
                <HBox.margin>
-                  <Insets bottom="10.0" left="68.0" top="10.0" />
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="tfAno" prefHeight="34.0" prefWidth="323.0">
+               <HBox.margin>
+                  <Insets top="5.0" />
                </HBox.margin>
             </TextField>
          </children>
       </HBox>
-      <HBox layoutX="638.0" layoutY="361.0" prefHeight="66.0" prefWidth="467.0">
+      <HBox layoutX="368.0" layoutY="260.0" prefHeight="50.0" prefWidth="400.0">
          <children>
             <Label text="Placa:">
                <font>
-                  <Font name="Arial Rounded MT Bold" size="51.0" />
+                  <Font name="Arial Rounded MT Bold" size="30.0" />
                </font>
-            </Label>
-            <TextField fx:id="tfPlaca" prefHeight="46.0" prefWidth="219.0">
-               <padding>
-                  <Insets bottom="10.0" />
-               </padding>
                <HBox.margin>
-                  <Insets bottom="10.0" left="28.0" top="10.0" />
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="tfPlaca" prefHeight="34.0" prefWidth="295.0">
+               <HBox.margin>
+                  <Insets top="5.0" />
                </HBox.margin>
             </TextField>
          </children>
       </HBox>
-      <HBox layoutX="638.0" layoutY="427.0" prefHeight="66.0" prefWidth="479.0">
+      <HBox layoutX="368.0" layoutY="322.0" prefHeight="50.0" prefWidth="400.0">
          <children>
             <Label text="Cor:">
                <font>
-                  <Font name="Arial Rounded MT Bold" size="51.0" />
+                  <Font name="Arial Rounded MT Bold" size="30.0" />
                </font>
-            </Label>
-            <TextField fx:id="tfCor" prefHeight="46.0" prefWidth="224.0">
-               <padding>
-                  <Insets bottom="10.0" />
-               </padding>
                <HBox.margin>
-                  <Insets bottom="10.0" left="75.0" top="10.0" />
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="tfCor" prefHeight="34.0" prefWidth="324.0">
+               <HBox.margin>
+                  <Insets top="5.0" />
                </HBox.margin>
             </TextField>
          </children>
       </HBox>
-      <HBox layoutX="638.0" layoutY="493.0" prefHeight="66.0" prefWidth="527.0">
+      <HBox layoutX="368.0" layoutY="381.0" prefHeight="50.0" prefWidth="400.0">
          <children>
             <Label text="Model:">
                <font>
-                  <Font name="Arial Rounded MT Bold" size="51.0" />
+                  <Font name="Arial Rounded MT Bold" size="30.0" />
                </font>
-            </Label>
-            <TextField fx:id="tfModel" prefHeight="46.0" prefWidth="225.0">
-               <padding>
-                  <Insets bottom="10.0" />
-               </padding>
                <HBox.margin>
-                  <Insets bottom="10.0" left="20.0" top="10.0" />
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="tfModel" prefHeight="34.0" prefWidth="290.0">
+               <HBox.margin>
+                  <Insets top="5.0" />
                </HBox.margin>
             </TextField>
          </children>
       </HBox>
-      <Label layoutX="698.0" layoutY="44.0" text="Informações" textFill="#0088ff">
+      <Label layoutX="461.0" layoutY="28.0" text="Informações" textFill="#0088ff">
          <font>
-            <Font name="Arial Rounded MT Bold" size="51.0" />
+            <Font name="Arial Rounded MT Bold" size="43.0" />
          </font>
       </Label>
-      <Button fx:id="btncadastro" layoutX="869.0" layoutY="633.0" mnemonicParsing="false" onAction="#tbncadastrar" style="-fx-background-color: #0083ff; -fx-background-radius: 100px;" text="Cadastrar" textFill="WHITE">
+      <Button fx:id="btncadastro" layoutX="655.0" layoutY="476.0" mnemonicParsing="false" onAction="#tbncadastrar" style="-fx-background-color: #0083ff; -fx-background-radius: 100px;" text="Cadastrar" textFill="WHITE">
          <font>
-            <Font name="Arial Rounded MT Bold" size="37.0" />
+            <Font name="Arial Rounded MT Bold" size="22.0" />
          </font>
       </Button>
-      <Button fx:id="btnsaircadastro" layoutX="564.0" layoutY="633.0" mnemonicParsing="false" onAction="#btnsaircadastro" style="-fx-background-color: red; -fx-background-radius: 100px;" text="Voltar" textFill="WHITE">
+      <Button fx:id="btnsaircadastro" layoutX="393.0" layoutY="476.0" mnemonicParsing="false" onAction="#btnsaircadastro" style="-fx-background-color: red; -fx-background-radius: 100px;" text="Voltar" textFill="WHITE">
          <font>
-            <Font name="Arial Rounded MT Bold" size="37.0" />
+            <Font name="Arial Rounded MT Bold" size="22.0" />
          </font>
       </Button>
    </children>

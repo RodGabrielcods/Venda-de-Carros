@@ -10,40 +10,36 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="541.0" prefWidth="825.0" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaCadastrarFuncionarioController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaCadastrarFuncionarioController">
    <children>
-      <Pane prefHeight="541.0" prefWidth="336.0" style="-fx-background-color: #007cf8;">
+      <Pane prefHeight="600.0" prefWidth="336.0" style="-fx-background-color: #007cf8;">
          <children>
-            <Label layoutX="43.0" layoutY="282.0" text="Funcionario">
+            <Label layoutX="43.0" layoutY="297.0" text="Funcionario">
                <font>
                   <Font name="Arial Rounded MT Bold" size="43.0" />
                </font>
             </Label>
-            <Label layoutX="62.0" layoutY="238.0" text="Cadastrar" textFill="WHITE">
+            <Label layoutX="62.0" layoutY="253.0" text="Cadastrar" textFill="WHITE">
                <font>
                   <Font name="Arial Rounded MT Bold" size="43.0" />
                </font>
             </Label>
          </children>
       </Pane>
-      <HBox layoutX="369.0" layoutY="179.0" prefHeight="50.0" prefWidth="400.0">
+      <HBox layoutX="366.0" layoutY="212.0" prefHeight="50.0" prefWidth="400.0">
          <children>
-            <Label text="Nome:">
+            <Label prefHeight="36.0" prefWidth="109.0" text="Nome:">
                <font>
-                  <Font name="Arial Rounded MT Bold" size="43.0" />
+                  <Font name="Arial Rounded MT Bold" size="30.0" />
                </font>
             </Label>
-            <TextField fx:id="tfnomefun" prefHeight="34.0" prefWidth="157.0">
+            <TextField fx:id="tfnomefun" prefHeight="34.0" prefWidth="305.0">
                <opaqueInsets>
                   <Insets top="50.0" />
                </opaqueInsets>
                <HBox.margin>
-                  <Insets left="105.0" top="10.0" />
+                  <Insets top="5.0" />
                </HBox.margin>
-               <padding>
-                  <Insets left="20.0" />
-               </padding>
             </TextField>
          </children>
          <opaqueInsets>
@@ -60,71 +56,91 @@
             <Font name="Arial Rounded MT Bold" size="43.0" />
          </font>
       </Label>
-      <HBox layoutX="369.0" layoutY="249.0" prefHeight="50.0" prefWidth="406.0">
+      <HBox layoutX="366.0" layoutY="275.0" prefHeight="50.0" prefWidth="406.0">
          <children>
-            <Label text="CPF:">
+            <Label prefHeight="36.0" prefWidth="72.0" text="CPF:">
                <font>
-                  <Font name="Arial Rounded MT Bold" size="43.0" />
+                  <Font name="Arial Rounded MT Bold" size="30.0" />
                </font>
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
             </Label>
-            <TextField fx:id="tfcpffun" prefHeight="34.0" prefWidth="160.0">
+            <TextField fx:id="tfcpffun" prefHeight="34.0" prefWidth="324.0">
                <opaqueInsets>
                   <Insets left="30.0" top="50.0" />
                </opaqueInsets>
                <HBox.margin>
-                  <Insets left="140.0" top="10.0" />
+                  <Insets top="5.0" />
                </HBox.margin>
-               <padding>
-                  <Insets left="30.0" />
-               </padding>
             </TextField>
          </children>
          <opaqueInsets>
             <Insets top="50.0" />
          </opaqueInsets>
       </HBox>
-      <HBox layoutX="369.0" layoutY="314.0" prefHeight="50.0" prefWidth="415.0">
+      <HBox layoutX="369.0" layoutY="333.0" prefHeight="50.0" prefWidth="406.0">
          <children>
-            <Label text="Telefone:">
+            <Label prefHeight="36.0" prefWidth="147.0" text="Telefone:">
                <font>
-                  <Font name="Arial Rounded MT Bold" size="43.0" />
+                  <Font name="Arial Rounded MT Bold" size="30.0" />
                </font>
             </Label>
-            <TextField fx:id="tftelefun" prefHeight="34.0" prefWidth="159.0">
+            <TextField fx:id="tftelefun" prefHeight="34.0" prefWidth="269.0">
                <opaqueInsets>
                   <Insets top="50.0" />
                </opaqueInsets>
                <HBox.margin>
-                  <Insets left="45.0" top="10.0" />
+                  <Insets top="5.0" />
                </HBox.margin>
-               <padding>
-                  <Insets left="20.0" />
-               </padding>
             </TextField>
          </children>
          <opaqueInsets>
             <Insets top="50.0" />
          </opaqueInsets>
       </HBox>
-      <HBox layoutX="369.0" layoutY="380.0" prefHeight="50.0" prefWidth="415.0">
+      <HBox layoutX="369.0" layoutY="396.0" prefHeight="50.0" prefWidth="406.0">
          <children>
-            <Label text="Data Nascimento: ">
+            <Label prefHeight="36.0" prefWidth="328.0" text="Data Nascimento: ">
                <font>
-                  <Font name="Arial Rounded MT Bold" size="27.0" />
+                  <Font name="Arial Rounded MT Bold" size="30.0" />
                </font>
             </Label>
-            <DatePicker fx:id="dtfun" prefHeight="34.0" prefWidth="160.0" />
+            <DatePicker fx:id="dtfun" prefHeight="34.0" prefWidth="200.0" />
          </children>
       </HBox>
-      <Button fx:id="btncadastrarfuncionario" layoutX="630.0" layoutY="458.0" mnemonicParsing="false" onAction="#btncadastrarfuncionarioclick" style="-fx-background-color: #007cf8; -fx-background-radius: 100;" text="Cadastrar" textFill="WHITE">
+      <Button fx:id="btncadastrarfuncionario" layoutX="627.0" layoutY="479.0" mnemonicParsing="false" onAction="#btncadastrarfuncionarioclick" style="-fx-background-color: #007cf8; -fx-background-radius: 100;" text="Cadastrar" textFill="WHITE">
          <font>
             <Font name="Arial Rounded MT Bold" size="22.0" />
          </font>
       </Button>
-      <Button fx:id="btnsaircadastrarfuncionario" layoutX="398.0" layoutY="458.0" mnemonicParsing="false" onAction="#btnsaircadastrarfuncionarioclick" style="-fx-background-color: red; -fx-background-radius: 100;" text="Voltar" textFill="WHITE">
+      <Button fx:id="btnsaircadastrarfuncionario" layoutX="398.0" layoutY="479.0" mnemonicParsing="false" onAction="#btnsaircadastrarfuncionarioclick" style="-fx-background-color: red; -fx-background-radius: 100;" text="Voltar" textFill="WHITE">
          <font>
             <Font name="Arial Rounded MT Bold" size="22.0" />
          </font>
       </Button>
+      <HBox layoutX="366.0" layoutY="156.0" prefHeight="50.0" prefWidth="400.0">
+         <children>
+            <Label prefHeight="36.0" prefWidth="225.0" text="Endereço:">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="30.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfenderefun" prefHeight="34.0" prefWidth="307.0">
+               <opaqueInsets>
+                  <Insets top="50.0" />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets top="5.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+         <opaqueInsets>
+            <Insets top="50.0" />
+         </opaqueInsets>
+      </HBox>
    </children>
+   <padding>
+      <Insets top="10.0" />
+   </padding>
 </AnchorPane>
