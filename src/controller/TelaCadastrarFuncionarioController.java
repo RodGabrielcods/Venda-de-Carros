@@ -36,7 +36,7 @@ public class TelaCadastrarFuncionarioController {
 
     @FXML
     void btncadastrarfuncionarioclick(ActionEvent event) {
-
+        
     }
 
     @FXML
