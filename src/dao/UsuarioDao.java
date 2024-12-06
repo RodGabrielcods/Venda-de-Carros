@@ -10,7 +10,7 @@ import model.Usuario;
 public class UsuarioDao {
     public static boolean cadastrar(Usuario usuario) {
         String sql;
-        sql = "INSERT INTO Funcionario (nome_usuario, senha) ";
+        sql = "INSERT INTO Usuario (nome_usuario, senha) ";
         sql += "VALUES (?, ?)";
 
         try (Connection con = ConexaoMySql.getConexao()) {

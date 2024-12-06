@@ -86,7 +86,6 @@ public class TelaCadastrarFuncionarioController {
 
     @FXML
     void btnsaircadastrarfuncionarioclick(ActionEvent event) throws IOException {
-
         URL url = getClass().getResource("/view/MenuAdmin.fxml");
         Parent root = FXMLLoader.load(url);
 
@@ -99,5 +98,4 @@ public class TelaCadastrarFuncionarioController {
         telaAtual.close();
 
     }
-
 }
