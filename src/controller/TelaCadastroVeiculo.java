@@ -74,6 +74,7 @@ public class TelaCadastroVeiculo {
                 alertErro.show();
             }
         } catch (NumberFormatException e) {
+            veiculo.setPlaca(null);
             alertErro.setHeaderText("Erro de Validação");
             alertErro.setContentText("Todos os campos devem ser preenchidos corretamente!");
             alertErro.show();

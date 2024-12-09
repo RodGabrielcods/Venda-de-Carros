@@ -53,7 +53,7 @@ public class TelaListarFuncionarioController {
     ObservableList<Funcionario> obsFun;
 
     @FXML
-    private void inicializate() {
+    private void initialize() {
         colCPF.setCellValueFactory(new PropertyValueFactory<>("cpf"));
         colDataNascimento.setCellValueFactory(new PropertyValueFactory<>("dt_nascimento"));
         colEndereco.setCellValueFactory(new PropertyValueFactory<>("endereco"));
@@ -71,11 +71,6 @@ public class TelaListarFuncionarioController {
         List<Funcionario> funcionarioCadastrado = FuncionarioDao.listar();
 
         for (Funcionario funcionario : funcionarioCadastrado) {
-            System.out.println(funcionario.getCpf());
-            System.out.println(funcionario.getEndereco());
-            System.out.println(funcionario.getNome());
-            System.out.println(funcionario.getDt_nascimento());
-            System.out.println(funcionario.getTelefone());
             obsFun.add(funcionario);
         }
     }
