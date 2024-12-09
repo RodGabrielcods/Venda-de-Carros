@@ -29,7 +29,7 @@ public class TelaRemoverFuncionarioController {
 
     @FXML
     void btnremoverfunclick(ActionEvent event) {
-
+        
     }
 
     @FXML
