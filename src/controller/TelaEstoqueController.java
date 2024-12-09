@@ -2,7 +2,12 @@ package controller;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 
+import dao.FuncionarioDao;
+import dao.VeiculoDao;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,7 +17,10 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import model.Funcionario;
+import model.Veiculo;
 
 public class TelaEstoqueController {
 
@@ -23,29 +31,49 @@ public class TelaEstoqueController {
     private Button btnsairpesquisa;
 
     @FXML
-    private TableColumn<?, ?> colAno;
+    private TableColumn<Veiculo, Integer> colAno;
 
     @FXML
-    private TableColumn<?, ?> colCor;
+    private TableColumn<Veiculo, String> colCor;
     
     @FXML
-    private TableColumn<?, ?> colIDCar;
+    private TableColumn<Veiculo, Integer> colIDCar;
 
     @FXML
-    private TableColumn<?, ?> colMarca;
+    private TableColumn<Veiculo, String> colMarca;
 
     @FXML
-    private TableColumn<?, ?> colModelo;
+    private TableColumn<Veiculo, String> colModelo;
 
     @FXML
-    private TableColumn<?, ?> colPlaca;
+    private TableColumn<Veiculo, String> colPlaca;
 
     @FXML
-    private TableView<?> tbestoque;
+    private TableView<Veiculo> tbestoque;
+
+    ObservableList<Veiculo> obscar;
+
+    @FXML
+    private void initialize() {
+        colAno.setCellValueFactory(new PropertyValueFactory<>("ano"));
+        colCor.setCellValueFactory(new PropertyValueFactory<>("cor"));
+        colIDCar.setCellValueFactory(new PropertyValueFactory<>("idVeiculo"));
+        colMarca.setCellValueFactory(new PropertyValueFactory<>("marca"));
+        colModelo.setCellValueFactory(new PropertyValueFactory<>("modelo"));
+        colPlaca.setCellValueFactory(new PropertyValueFactory<>("placa"));
+
+        obscar = FXCollections.observableArrayList();
+
+        tbestoque.setItems(obscar);
+    }
 
     @FXML
     void btnpesquisar(ActionEvent event) {
+        List<Veiculo> veiculoCadastrado = VeiculoDao.listar();
 
+        for (Veiculo veiculo : veiculoCadastrado) {
+            obscar.add(veiculo);
+        }
     }
 
     @FXML
