@@ -56,10 +56,30 @@ public class FuncionarioDao {
             }
 
             return lista;
-            
+
         } catch (SQLException erro) {
             System.out.println("ERRO: " + erro.getMessage());
             return null;
+        }
+    }
+
+    public static void atualizar(int idFuncionario, String nome, String telefone, String endereco, LocalDate dt_nascimento, String cpf) {
+        String sql = "UPDATE Funcionario SET nome = ?, telefone = ?, endereco = ?, dt_nascimento = ?, cpf = ? WHERE idFuncionario = ?";
+
+        try (Connection con = ConexaoMySql.getConexao();
+                PreparedStatement ps = con.prepareStatement(sql)) {
+
+            ps.setString(1, nome);
+            ps.setString(2, telefone);
+            ps.setString(3, endereco);
+            ps.setObject(4, dt_nascimento);
+            ps.setString(5, cpf);
+            ps.setInt(6, idFuncionario);
+
+            ps.executeUpdate();
+
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }
