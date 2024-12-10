@@ -63,23 +63,39 @@ public class FuncionarioDao {
         }
     }
 
-    public static void atualizar(int idFuncionario, String nome, String telefone, String endereco, LocalDate dt_nascimento, String cpf) {
+    public static boolean atualizar(Funcionario funcionario) {
         String sql = "UPDATE Funcionario SET nome = ?, telefone = ?, endereco = ?, dt_nascimento = ?, cpf = ? WHERE idFuncionario = ?";
+    
+        try (Connection con = ConexaoMySql.getConexao();
+             PreparedStatement ps = con.prepareStatement(sql)) {
+    
+            ps.setString(1, funcionario.getNome());
+            ps.setString(2, funcionario.getTelefone());
+            ps.setString(3, funcionario.getEndereco());
+            ps.setObject(4, funcionario.getDt_nascimento());
+            ps.setString(5, funcionario.getCpf());
+            ps.setInt(6, funcionario.getIdFuncionario());
+    
+            return ps.executeUpdate() > 0;
+    
+        } catch (SQLException e) {
+            System.out.println("ERRO AO ATUALIZAR: " + e.getMessage());
+            return false;
+        }
+    }
 
+    public static boolean excluir(int idFuncionario) {
+        String sql = "DELETE FROM Funcionario WHERE idFuncionario = ?";
         try (Connection con = ConexaoMySql.getConexao();
                 PreparedStatement ps = con.prepareStatement(sql)) {
 
-            ps.setString(1, nome);
-            ps.setString(2, telefone);
-            ps.setString(3, endereco);
-            ps.setObject(4, dt_nascimento);
-            ps.setString(5, cpf);
-            ps.setInt(6, idFuncionario);
+            ps.setInt(1, idFuncionario);
+            return ps.executeUpdate() > 0;
 
-            ps.executeUpdate();
-
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (SQLException e) {
+            System.out.println("ERRO AO EXCLUIR: " + e.getMessage());
+            return false;
         }
     }
+
 }

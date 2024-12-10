@@ -14,9 +14,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import model.Funcionario;
@@ -24,13 +26,22 @@ import model.Funcionario;
 public class TelaListarFuncionarioController {
 
     @FXML
-    private Button btnListaFun;
+    private Button btnRemoverFun;
 
     @FXML
-    private Button btnsairListaFun;
+    private Button btnatualizarFun;
 
     @FXML
-    private TableColumn<Funcionario, String> colCPF;
+    private Button btnpesquisa;
+
+    @FXML
+    private Button btnsairpesquisa;
+
+    @FXML
+    private TextField tfiltro;
+
+    @FXML
+    private TableColumn<Funcionario, String> colCpf;
 
     @FXML
     private TableColumn<Funcionario, LocalDate> colDataNascimento;
@@ -54,7 +65,7 @@ public class TelaListarFuncionarioController {
 
     @FXML
     private void initialize() {
-        colCPF.setCellValueFactory(new PropertyValueFactory<>("cpf"));
+        colCpf.setCellValueFactory(new PropertyValueFactory<>("cpf"));
         colDataNascimento.setCellValueFactory(new PropertyValueFactory<>("dt_nascimento"));
         colEndereco.setCellValueFactory(new PropertyValueFactory<>("endereco"));
         colIDFun.setCellValueFactory(new PropertyValueFactory<>("idFuncionario"));
@@ -67,16 +78,73 @@ public class TelaListarFuncionarioController {
     }
 
     @FXML
-    void btnListaFunclick(ActionEvent event) {
-        List<Funcionario> funcionarioCadastrado = FuncionarioDao.listar();
+    void btnRemoverFunclick(ActionEvent event) {
+        Funcionario funcionarioSelecionado = tbFuncionario.getSelectionModel().getSelectedItem();
 
-        for (Funcionario funcionario : funcionarioCadastrado) {
-            obsFun.add(funcionario);
+        if (funcionarioSelecionado != null) {
+            boolean sucesso = FuncionarioDao.excluir(funcionarioSelecionado.getIdFuncionario());
+
+            if (sucesso) {
+                obsFun.remove(funcionarioSelecionado);
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setHeaderText("Exclusão realizada");
+                alert.setContentText("Funcionário excluído com sucesso!");
+                alert.show();
+            } else {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setHeaderText("Erro");
+                alert.setContentText("Não foi possível excluir o funcionário.");
+                alert.show();
+            }
+        } else {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setHeaderText("Seleção inválida");
+            alert.setContentText("Selecione um funcionário para excluir.");
+            alert.show();
         }
+
     }
 
     @FXML
-    void btnsairListaFunclick(ActionEvent event) throws IOException {
+    void btnatualizarFunclick(ActionEvent event) throws IOException {
+        Funcionario funcionarioSelecionado = tbFuncionario.getSelectionModel().getSelectedItem();
+        if (funcionarioSelecionado != null) {
+            URL url = getClass().getResource("/view/TelaAtualizarFuncionario.fxml");
+            Parent root = FXMLLoader.load(url);
+
+            Stage stgMenuAdmin = new Stage();
+            stgMenuAdmin.setTitle("Atualizar Funcionario");
+            stgMenuAdmin.setScene(new Scene(root));
+            stgMenuAdmin.show();
+
+            Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            telaAtual.close();
+        } else {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setHeaderText("Seleção inválida");
+            alert.setContentText("Selecione um funcionário para editar.");
+            alert.show();
+        }
+
+    }
+
+    @FXML
+    void btnpesquisar(ActionEvent event) {
+        String termo = tfiltro.getText().toLowerCase();
+
+        obsFun.clear();
+
+        for (Funcionario funcionario : FuncionarioDao.listar()) {
+            if (funcionario.getNome().toLowerCase().contains(termo)) {
+                obsFun.add(funcionario);
+            }
+        }
+
+        tbFuncionario.setItems(obsFun);
+    }
+
+    @FXML
+    void btnsairpesquisaclick(ActionEvent event) throws IOException {
         URL url = getClass().getResource("/view/MenuAdmin.fxml");
         Parent root = FXMLLoader.load(url);
 
@@ -88,4 +156,5 @@ public class TelaListarFuncionarioController {
         Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
         telaAtual.close();
     }
+
 }

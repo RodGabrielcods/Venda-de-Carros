@@ -4,22 +4,38 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="837.0" prefWidth="1076.0" style="-fx-background-color: #00c0ff;" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaEstoqueController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="908.0" prefWidth="1269.0" style="-fx-background-color: #00c0ff;" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaEstoqueController">
    <children>
-      <Label alignment="CENTER" layoutX="-9.0" layoutY="-3.0" prefHeight="339.0" prefWidth="1086.0" style="-fx-background-color: #0083ff;" text="Veículos em Estoque" textFill="WHITE">
-         <font>
-            <Font name="Arial Rounded MT Bold" size="48.0" />
-         </font>
-      </Label>
-      <Button fx:id="btnpesquisa" layoutX="809.0" layoutY="186.0" mnemonicParsing="false" onAction="#btnpesquisar" prefHeight="50.0" prefWidth="167.0" style="-fx-background-color: #00c0ff; -fx-background-radius: 100px;" text="Pesquisar" textFill="WHITE">
-         <font>
-            <Font name="Arial Rounded MT Bold" size="26.0" />
-         </font>
-      </Button>
-      <TableView fx:id="tbestoque" layoutY="219.0" prefHeight="807.0" prefWidth="1920.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="250.0">
+      <Pane prefHeight="349.0" prefWidth="1269.0" style="-fx-background-color: #0083ff;">
+         <children>
+            <Button fx:id="btnpesquisa" layoutX="1066.0" layoutY="158.0" mnemonicParsing="false" onAction="#btnpesquisar" prefHeight="50.0" prefWidth="139.0" style="-fx-background-color: #00c0ff; -fx-background-radius: 100px;" text="Pesquisar" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="22.0" />
+               </font>
+            </Button>
+            <Label alignment="CENTER" layoutX="400.0" layoutY="14.0" prefHeight="95.0" prefWidth="502.0" style="-fx-background-color: #0083ff;" text="Veículos em Estoque" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="48.0" />
+               </font>
+            </Label>
+            <TextField layoutX="145.0" layoutY="164.0" prefHeight="25.0" prefWidth="876.0" promptText="Digite a palca do carro ..." style="-fx-background-radius: 30;">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="20.0" />
+               </font>
+            </TextField>
+            <Label alignment="CENTER" layoutX="145.0" layoutY="109.0" prefHeight="50.0" prefWidth="152.0" text="Filtrar:" textFill="WHITE">
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="38.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TableView fx:id="tbestoque" layoutX="142.0" layoutY="236.0" prefHeight="511.0" prefWidth="985.0" style="-fx-background-radius: 30;" AnchorPane.bottomAnchor="161.0" AnchorPane.leftAnchor="142.0" AnchorPane.rightAnchor="142.0" AnchorPane.topAnchor="236.0">
         <columns>
           <TableColumn fx:id="colMarca" prefWidth="293.0" text="Marca" />
           <TableColumn fx:id="colAno" prefWidth="249.0" text="Ano" />
@@ -32,7 +48,17 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <Button fx:id="btnsairpesquisa" layoutX="100.0" layoutY="186.0" mnemonicParsing="false" onAction="#btnsairpesquisaclick" prefHeight="50.0" prefWidth="152.0" style="-fx-background-color: red; -fx-background-radius: 100px;" text="Voltar" textFill="WHITE">
+      <Button fx:id="btnatualizarCar" layoutX="559.0" layoutY="800.0" mnemonicParsing="false" onAction="#btnatualizarFunclick" prefHeight="50.0" prefWidth="152.0" style="-fx-background-color: #0083ff; -fx-background-radius: 100px;" text="Atualizar" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="26.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnRemoverCar" layoutX="975.0" layoutY="800.0" mnemonicParsing="false" onAction="#btnRemoverFunclick" prefHeight="50.0" prefWidth="152.0" style="-fx-background-color: #0083ff; -fx-background-radius: 100px;" text="Remover" textFill="WHITE">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="26.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnsairpesquisa" layoutX="142.0" layoutY="788.0" mnemonicParsing="false" onAction="#btnsairpesquisaclick" prefHeight="50.0" prefWidth="152.0" style="-fx-background-color: red; -fx-background-radius: 100px;" text="Voltar" textFill="WHITE">
          <font>
             <Font name="Arial Rounded MT Bold" size="26.0" />
          </font>

@@ -10,18 +10,17 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import model.Funcionario;
 
 public class TelaAtualizarFuncionarioController {
 
     @FXML
     private Button btnatualizarFun;
-
-    @FXML
-    private TextField tfAtualizarId;
 
     @FXML
     private Button btnsairatualizarFun;
@@ -36,19 +35,45 @@ public class TelaAtualizarFuncionarioController {
     private TextField tfatualizarEndereco;
 
     @FXML
-    private TextField tfatualizarID;
-
-    @FXML
     private TextField tfatualizarNome;
 
     @FXML
     private TextField tfatualizarTelefone;
 
+    private Funcionario funcionario;
+
     @FXML
     void btnatualizarFunclick(ActionEvent event) {
-        FuncionarioDao.atualizar(Integer.parseInt(tfAtualizarId.getText()), tfatualizarNome.getText(),
-                tfatualizarTelefone.getText(), tfatualizarEndereco.getText(), dtatualizarData.getValue(),
-                tfatualizarCPF.getText());
+
+        try {
+            funcionario.setNome(tfatualizarNome.getText());
+            funcionario.setEndereco(tfatualizarEndereco.getText());
+            funcionario.setTelefone(tfatualizarTelefone.getText());
+            funcionario.setCpf(tfatualizarCPF.getText());
+            funcionario.setDt_nascimento(dtatualizarData.getValue());
+
+            boolean sucesso = FuncionarioDao.atualizar(funcionario);
+
+            if (sucesso) {
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setHeaderText("Atualização realizada");
+                alert.setContentText("Funcionário atualizado com sucesso!");
+                alert.show();
+
+                Stage stage = (Stage) btnatualizarFun.getScene().getWindow();
+                stage.close();
+            } else {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setHeaderText("Erro");
+                alert.setContentText("Não foi possível atualizar o funcionário.");
+                alert.show();
+            }
+        } catch (Exception e) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setHeaderText("Erro de Validação");
+            alert.setContentText("Preencha todos os campos corretamente!");
+            alert.show();
+        }
     }
 
     @FXML

@@ -134,23 +134,7 @@
                   </DatePicker>
                </children>
             </HBox>
-            <HBox prefHeight="103.0" prefWidth="198.0">
-               <children>
-                  <Label text="ID:">
-                     <font>
-                        <Font name="Arial Rounded MT Bold" size="51.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="tfatualizarID" prefHeight="46.0" prefWidth="498.0">
-                     <HBox.margin>
-                        <Insets bottom="10.0" left="10.0" top="10.0" />
-                     </HBox.margin>
-                     <padding>
-                        <Insets bottom="10.0" />
-                     </padding>
-                  </TextField>
-               </children>
-            </HBox>
+            <HBox prefHeight="103.0" prefWidth="198.0" />
          </children>
       </VBox>
    </children>

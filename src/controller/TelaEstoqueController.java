@@ -23,6 +23,12 @@ import model.Veiculo;
 public class TelaEstoqueController {
 
     @FXML
+    private Button btnRemoverCar;
+
+    @FXML
+    private Button btnatualizarCar;
+
+    @FXML
     private Button btnpesquisa;
 
     @FXML
@@ -87,6 +93,16 @@ public class TelaEstoqueController {
 
         Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
         telaAtual.close();
+
+    }
+
+    @FXML
+    void btnRemoverCarclick(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnatualizarCarclick(ActionEvent event) {
 
     }
 
