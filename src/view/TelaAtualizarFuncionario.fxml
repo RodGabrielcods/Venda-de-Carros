@@ -63,6 +63,9 @@
                      <padding>
                         <Insets bottom="10.0" />
                      </padding>
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="24.0" />
+                     </font>
                   </TextField>
                </children>
             </HBox>
@@ -80,6 +83,9 @@
                      <HBox.margin>
                         <Insets bottom="10.0" top="10.0" />
                      </HBox.margin>
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="24.0" />
+                     </font>
                   </TextField>
                </children>
             </HBox>
@@ -100,6 +106,9 @@
                      <HBox.margin>
                         <Insets bottom="10.0" left="28.0" top="10.0" />
                      </HBox.margin>
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="24.0" />
+                     </font>
                   </TextField>
                </children>
             </HBox>
@@ -117,6 +126,9 @@
                      <HBox.margin>
                         <Insets bottom="10.0" top="10.0" />
                      </HBox.margin>
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="24.0" />
+                     </font>
                   </TextField>
                </children>
             </HBox>

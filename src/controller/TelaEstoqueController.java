@@ -39,7 +39,7 @@ public class TelaEstoqueController {
 
     @FXML
     private TableColumn<Veiculo, String> colCor;
-    
+
     @FXML
     private TableColumn<Veiculo, Integer> colIDCar;
 
@@ -72,6 +72,16 @@ public class TelaEstoqueController {
     }
 
     @FXML
+    void btnRemoverFunclick(ActionEvent event) {
+
+    }
+
+    @FXML
+    void btnatualizarFunclick(ActionEvent event) {
+
+    }
+
+    @FXML
     void btnpesquisar(ActionEvent event) {
         List<Veiculo> veiculoCadastrado = VeiculoDao.listar();
 
@@ -82,7 +92,6 @@ public class TelaEstoqueController {
 
     @FXML
     void btnsairpesquisaclick(ActionEvent event) throws IOException {
-
         URL url = getClass().getResource("/view/TelaMenu.fxml");
         Parent root = FXMLLoader.load(url);
 
@@ -93,17 +102,6 @@ public class TelaEstoqueController {
 
         Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
         telaAtual.close();
-
-    }
-
-    @FXML
-    void btnRemoverCarclick(ActionEvent event) {
-
-    }
-
-    @FXML
-    void btnatualizarCarclick(ActionEvent event) {
-
     }
 
 }
