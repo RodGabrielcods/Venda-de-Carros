@@ -12,81 +12,75 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="810.0" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaCarrosController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="810.0" style="-fx-background-color: #dad8d8;" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaCarrosController">
    <children>
-      <VBox layoutX="491.0" layoutY="149.0" prefHeight="249.0" prefWidth="243.0">
+      <VBox layoutX="487.0" layoutY="187.0" prefHeight="105.0" prefWidth="247.0" AnchorPane.bottomAnchor="166.0">
          <children>
-            <Label alignment="CENTER" prefHeight="53.0" prefWidth="282.0" text="Login" textFill="#0064ff">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="41.0" />
-               </font>
-               <padding>
-                  <Insets bottom="20.0" />
-               </padding>
-            </Label>
-            <TextField fx:id="tfuser" prefHeight="30.0" prefWidth="243.0" style="-fx-border-style: solid; -fx-border-width: 2px; -fx-border-color: #0077ff;">
+            <TextField fx:id="tfuser" prefHeight="30.0" prefWidth="243.0" promptText="   User" style="-fx-border-style: solid; -fx-border-width: 2px; -fx-border-color: #0c161f; -fx-background-radius: 30; -fx-border-radius: 30;">
                <cursor>
                   <Cursor fx:constant="DEFAULT" />
                </cursor>
                <padding>
                   <Insets bottom="1.0" />
                </padding>
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="25.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
             </TextField>
-            <Label alignment="CENTER" prefHeight="53.0" prefWidth="289.0" text="PASSWORD" textFill="#0064ff">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="41.0" />
-               </font>
-               <padding>
-                  <Insets bottom="20.0" top="20.0" />
-               </padding>
-            </Label>
-            <TextField fx:id="tfsenha" prefHeight="28.0" prefWidth="243.0" style="-fx-border-style: solid; -fx-border-width: 2px; -fx-border-color: #0077ff;">
+            <TextField fx:id="tfsenha" prefHeight="28.0" prefWidth="243.0" promptText="   Password" style="-fx-border-style: solid; -fx-border-width: 2px; -fx-border-color: #0c161f; -fx-background-radius: 30; -fx-border-radius: 30;">
                <cursor>
                   <Cursor fx:constant="DEFAULT" />
                </cursor>
                <padding>
                   <Insets bottom="1.0" />
                </padding>
+               <font>
+                  <Font name="Arial Rounded MT Bold" size="25.0" />
+               </font>
             </TextField>
          </children>
+         <opaqueInsets>
+            <Insets bottom="30.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="30.0" />
+         </padding>
       </VBox>
-      <Label layoutX="593.0" layoutY="67.0" text="User " textFill="#008dff">
-         <font>
-            <Font name="Arial Rounded MT Bold" size="47.0" />
-         </font>
-      </Label>
-      <Pane prefHeight="475.0" prefWidth="349.0" style="-fx-background-color: #0077ff;">
+      <Pane layoutX="-61.0" layoutY="-14.0" prefHeight="501.0" prefWidth="387.0" style="-fx-background-color: #0c161f; -fx-background-radius: 100;">
          <children>
-            <ImageView fitHeight="249.0" fitWidth="270.0" layoutX="26.0" layoutY="128.0">
-               <image>
-                  <Image url="@../../img/pngegg.png" />
-               </image>
-            </ImageView>
-            <Button fx:id="btnadmin" layoutX="104.0" layoutY="381.0" mnemonicParsing="false" onAction="#btnadminclick" style="-fx-background-color: red; -fx-background-radius: 50px;" text="Admin" textFill="WHITE">
+            <Button fx:id="btnadmin" layoutX="159.0" layoutY="363.0" mnemonicParsing="false" onAction="#btnadminclick" style="-fx-background-color: #0c161f; -fx-background-radius: 50px; -fx-border-color: black; -fx-border-radius: 30;" text="Admin" textFill="WHITE">
                <font>
                   <Font name="Arial Rounded MT Bold" size="25.0" />
                </font>
             </Button>
+            <ImageView fitHeight="259.0" fitWidth="268.0" layoutX="82.0" layoutY="93.0">
+               <image>
+                  <Image url="@../../img/Design_sem_nome_2.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
-      <ImageView fitHeight="33.0" fitWidth="36.0" layoutX="448.0" layoutY="215.0">
+      <ImageView fitHeight="47.0" fitWidth="44.0" layoutX="440.0" layoutY="173.0">
          <image>
             <Image url="@../../img/pngegg%20.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="33.0" fitWidth="36.0" layoutX="448.0" layoutY="334.0">
+      <ImageView fitHeight="47.0" fitWidth="44.0" layoutX="440.0" layoutY="234.0">
          <image>
             <Image url="@../../img/pngegg%20(2).png" />
          </image>
       </ImageView>
-      <Label layoutX="517.0" layoutY="14.0" text=" Login">
+      <Label layoutX="519.0" layoutY="85.0" text=" Login" textFill="#111010" AnchorPane.leftAnchor="519.0" AnchorPane.rightAnchor="140.0">
          <font>
             <Font name="Arial Rounded MT Bold" size="51.0" />
          </font>
       </Label>
-      <Button fx:id="btnvai" layoutX="562.0" layoutY="390.0" mnemonicParsing="false" onAction="#btncadastrar" style="-fx-background-color: #00dcff; -fx-background-radius: 50px;" text="Enter" textFill="WHITE">
+      <Button fx:id="btnvai" layoutX="538.0" layoutY="344.0" mnemonicParsing="false" onAction="#btncadastrar" prefHeight="49.0" prefWidth="114.0" style="-fx-background-color: #0c161f; -fx-background-radius: 50px; -fx-border-color: black; -fx-border-radius: 30;" text="Enter" textFill="WHITE">
          <font>
-            <Font name="Arial Rounded MT Bold" size="25.0" />
+            <Font name="Arial Rounded MT Bold" size="27.0" />
          </font>
       </Button>
    </children>

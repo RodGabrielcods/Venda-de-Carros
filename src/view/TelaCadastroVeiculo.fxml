@@ -4,6 +4,8 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
@@ -11,18 +13,23 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaCadastroVeiculo">
    <children>
-      <Pane prefHeight="600.0" prefWidth="336.0" style="-fx-background-color: #0083ff;">
+      <Pane layoutX="-47.0" layoutY="-15.0" prefHeight="634.0" prefWidth="371.0" style="-fx-background-color: #0c161f; -fx-background-radius: 100;">
          <children>
-            <Label layoutX="57.0" layoutY="250.0" text="Cadastrar " textFill="WHITE">
+            <Label layoutX="93.0" layoutY="451.0" text="Cadastrar " textFill="WHITE">
                <font>
                   <Font name="Arial Rounded MT Bold" size="43.0" />
                </font>
             </Label>
-            <Label layoutX="90.0" layoutY="300.0" text="Veículo">
+            <Label layoutX="126.0" layoutY="501.0" text="Veículo" textFill="WHITE">
                <font>
                   <Font name="Arial Rounded MT Bold" size="43.0" />
                </font>
             </Label>
+            <ImageView fitHeight="248.0" fitWidth="222.0" layoutX="93.0" layoutY="149.0">
+               <image>
+                  <Image url="@../../img/Design_sem_nome_2.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
       <HBox layoutX="362.0" layoutY="136.0" prefHeight="50.0" prefWidth="400.0">
@@ -110,12 +117,12 @@
             </TextField>
          </children>
       </HBox>
-      <Label layoutX="461.0" layoutY="28.0" text="Informações" textFill="#0088ff">
+      <Label layoutX="461.0" layoutY="28.0" text="Informações" textFill="#0c161f">
          <font>
             <Font name="Arial Rounded MT Bold" size="43.0" />
          </font>
       </Label>
-      <Button fx:id="btncadastro" layoutX="655.0" layoutY="476.0" mnemonicParsing="false" onAction="#tbncadastrar" style="-fx-background-color: #0083ff; -fx-background-radius: 100px;" text="Cadastrar" textFill="WHITE">
+      <Button fx:id="btncadastro" layoutX="655.0" layoutY="476.0" mnemonicParsing="false" onAction="#tbncadastrar" style="-fx-background-color: #0c161f; -fx-background-radius: 100px;" text="Cadastrar" textFill="WHITE">
          <font>
             <Font name="Arial Rounded MT Bold" size="22.0" />
          </font>
