@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="908.0" prefWidth="1269.0" style="-fx-background-color: #00c0ff;" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaEstoqueController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="873.0" prefWidth="1219.0" style="-fx-background-color: #00c0ff;" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaEstoqueController">
    <children>
-      <Pane prefHeight="349.0" prefWidth="1269.0" style="-fx-background-color: #0083ff;">
+      <Pane prefHeight="339.0" prefWidth="1219.0" style="-fx-background-color: #0083ff;">
          <children>
             <Button fx:id="btnpesquisa" layoutX="1066.0" layoutY="158.0" mnemonicParsing="false" onAction="#btnpesquisar" prefHeight="50.0" prefWidth="139.0" style="-fx-background-color: #00c0ff; -fx-background-radius: 100px;" text="Pesquisar" textFill="WHITE">
                <font>
