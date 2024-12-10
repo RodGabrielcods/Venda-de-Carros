@@ -27,37 +27,17 @@
             </Button>
          </children>
       </Pane>
-      <Button fx:id="btnadlistarveiculo" layoutX="628.0" layoutY="561.0" mnemonicParsing="false" onAction="#btnadlistarveiculoclick" style="-fx-background-color: #007cf8; -fx-background-radius: 100;" text="Estoque" textFill="WHITE">
+      <Button fx:id="btnadlistarveiculo" layoutX="757.0" layoutY="488.0" mnemonicParsing="false" onAction="#btnadlistarveiculoclick" prefHeight="54.0" prefWidth="206.0" style="-fx-background-color: #007cf8; -fx-background-radius: 100;" text="Estoque" textFill="WHITE">
          <font>
             <Font name="Arial Rounded MT Bold" size="29.0" />
          </font>
       </Button>
-      <Button fx:id="btnadautualizarveiculo" layoutX="809.0" layoutY="488.0" mnemonicParsing="false" onAction="#btnadautualizarveiculoclick" style="-fx-background-color: #007cf8; -fx-background-radius: 100;" text="Atualizar " textFill="WHITE">
+      <Button fx:id="btnlistarfun" contentDisplay="CENTER" layoutX="757.0" layoutY="167.0" mnemonicParsing="false" onAction="#btnlistarfunclick" prefHeight="54.0" prefWidth="206.0" style="-fx-background-color: #007cf8; -fx-background-radius: 100;" text="Listar" textFill="WHITE">
          <font>
             <Font name="Arial Rounded MT Bold" size="29.0" />
          </font>
       </Button>
-      <Button fx:id="btnadremoverveiculo" layoutX="619.0" layoutY="488.0" mnemonicParsing="false" onAction="#btnadremoverveiculoclick" style="-fx-background-color: #007cf8; -fx-background-radius: 100;" text="Remover " textFill="WHITE">
-         <font>
-            <Font name="Arial Rounded MT Bold" size="29.0" />
-         </font>
-      </Button>
-      <Button fx:id="btnlistarfun" contentDisplay="CENTER" layoutX="613.0" layoutY="205.0" mnemonicParsing="false" onAction="#btnlistarfunclick" prefHeight="54.0" prefWidth="173.0" style="-fx-background-color: #007cf8; -fx-background-radius: 100;" text="Listar" textFill="WHITE">
-         <font>
-            <Font name="Arial Rounded MT Bold" size="29.0" />
-         </font>
-      </Button>
-      <Button fx:id="btnnovofun" layoutX="438.0" layoutY="126.0" mnemonicParsing="false" onAction="#btnnovofunclick" prefHeight="54.0" prefWidth="147.0" style="-fx-background-color: #007cf8; -fx-background-radius: 100;" text="Novo " textFill="WHITE">
-         <font>
-            <Font name="Arial Rounded MT Bold" size="29.0" />
-         </font>
-      </Button>
-      <Button fx:id="btnremoverfun" layoutX="608.0" layoutY="126.0" mnemonicParsing="false" onAction="#btnremoverfunclick" prefHeight="54.0" prefWidth="180.0" style="-fx-background-color: #007cf8; -fx-background-radius: 100;" text="Remover " textFill="WHITE">
-         <font>
-            <Font name="Arial Rounded MT Bold" size="29.0" />
-         </font>
-      </Button>
-      <Button fx:id="btnatualizarfun" contentDisplay="CENTER" layoutX="808.0" layoutY="126.0" mnemonicParsing="false" onAction="#btnatualizarfunclick" prefHeight="54.0" prefWidth="173.0" style="-fx-background-color: #007cf8; -fx-background-radius: 100;" text="Atualizar " textFill="WHITE">
+      <Button fx:id="btnnovofun" layoutX="461.0" layoutY="167.0" mnemonicParsing="false" onAction="#btnnovofunclick" prefHeight="54.0" prefWidth="206.0" style="-fx-background-color: #007cf8; -fx-background-radius: 100;" text="Cadastrar" textFill="WHITE">
          <font>
             <Font name="Arial Rounded MT Bold" size="29.0" />
          </font>
@@ -67,7 +47,7 @@
             <Font name="Arial Rounded MT Bold" size="45.0" />
          </font>
       </Label>
-      <Button fx:id="btnadcadastrarveiculo" layoutX="421.0" layoutY="488.0" mnemonicParsing="false" onAction="#btnadcadastrarveiculoclick" style="-fx-background-color: #007cf8; -fx-background-radius: 100;" text="Cadastrar" textFill="WHITE">
+      <Button fx:id="btnadcadastrarveiculo" layoutX="461.0" layoutY="488.0" mnemonicParsing="false" onAction="#btnadcadastrarveiculoclick" prefHeight="54.0" prefWidth="206.0" style="-fx-background-color: #007cf8; -fx-background-radius: 100;" text="Cadastrar" textFill="WHITE">
          <font>
             <Font name="Arial Rounded MT Bold" size="29.0" />
          </font>

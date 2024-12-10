@@ -109,13 +109,16 @@ public class TelaListarFuncionarioController {
     void btnatualizarFunclick(ActionEvent event) throws IOException {
         Funcionario funcionarioSelecionado = tbFuncionario.getSelectionModel().getSelectedItem();
         if (funcionarioSelecionado != null) {
-            URL url = getClass().getResource("/view/TelaAtualizarFuncionario.fxml");
-            Parent root = FXMLLoader.load(url);
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/TelaAtualizarFuncionario.fxml"));
+            Parent root = loader.load();
 
-            Stage stgMenuAdmin = new Stage();
-            stgMenuAdmin.setTitle("Atualizar Funcionario");
-            stgMenuAdmin.setScene(new Scene(root));
-            stgMenuAdmin.show();
+            TelaAtualizarFuncionarioController controller = loader.getController();
+            controller.setFuncionario(funcionarioSelecionado);
+
+            Stage stage = new Stage();
+            stage.setTitle("Atualizar Funcionario");
+            stage.setScene(new Scene(root));
+            stage.show();
 
             Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
             telaAtual.close();
@@ -125,7 +128,6 @@ public class TelaListarFuncionarioController {
             alert.setContentText("Selecione um funcionário para editar.");
             alert.show();
         }
-
     }
 
     @FXML

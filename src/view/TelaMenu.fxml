@@ -6,9 +6,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="591.0" prefWidth="788.0" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaMenuController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="624.0" prefWidth="823.0" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaMenuController">
    <children>
-      <Pane prefHeight="591.0" prefWidth="328.0" style="-fx-background-color: #0083ff;">
+      <Pane prefHeight="624.0" prefWidth="328.0" style="-fx-background-color: #0083ff;">
          <children>
             <Label layoutX="91.0" layoutY="206.0" text="Menu" textFill="WHITE">
                <font>
@@ -22,22 +22,17 @@
             </Label>
          </children>
       </Pane>
-      <Button fx:id="btncadastroveiculo" layoutX="345.0" layoutY="233.0" mnemonicParsing="false" onAction="#btncadastrarveiculoclick" prefHeight="50.0" prefWidth="206.0" style="-fx-background-color: #0083ff; -fx-background-radius: 100;" text="Cadastrar" textFill="WHITE">
+      <Button fx:id="btncadastroveiculo" layoutX="361.0" layoutY="283.0" mnemonicParsing="false" onAction="#btncadastrarveiculoclick" prefHeight="50.0" prefWidth="206.0" style="-fx-background-color: #0083ff; -fx-background-radius: 100;" text="Cadastrar" textFill="WHITE">
          <font>
             <Font name="Arial Rounded MT Bold" size="27.0" />
          </font>
       </Button>
-      <Button fx:id="btnestoque" layoutX="568.0" layoutY="233.0" mnemonicParsing="false" onAction="#btnestoqueclick" prefHeight="50.0" prefWidth="206.0" style="-fx-background-color: #0083ff; -fx-background-radius: 100;" text="Estoque" textFill="WHITE">
+      <Button fx:id="btnestoque" layoutX="593.0" layoutY="283.0" mnemonicParsing="false" onAction="#btnestoqueclick" prefHeight="50.0" prefWidth="206.0" style="-fx-background-color: #0083ff; -fx-background-radius: 100;" text="Estoque" textFill="WHITE">
          <font>
             <Font name="Arial Rounded MT Bold" size="27.0" />
          </font>
       </Button>
-      <Button fx:id="btnatualizar" layoutX="449.0" layoutY="307.0" mnemonicParsing="false" onAction="#btnatualizarclick" prefHeight="50.0" prefWidth="206.0" style="-fx-background-color: #0083ff; -fx-background-radius: 100;" text="Atualizar" textFill="WHITE">
-         <font>
-            <Font name="Arial Rounded MT Bold" size="27.0" />
-         </font>
-      </Button>
-      <Label layoutX="424.0" layoutY="58.0" text="Veículos">
+      <Label layoutX="449.0" layoutY="55.0" text="Veículos">
          <font>
             <Font name="Arial Rounded MT Bold" size="61.0" />
          </font>

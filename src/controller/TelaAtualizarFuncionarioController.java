@@ -1,15 +1,8 @@
 package controller;
 
-import java.io.IOException;
-import java.net.URL;
-
 import dao.FuncionarioDao;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
@@ -42,9 +35,18 @@ public class TelaAtualizarFuncionarioController {
 
     private Funcionario funcionario;
 
+    public void setFuncionario(Funcionario funcionario) {
+        this.funcionario = funcionario;
+
+        tfatualizarNome.setText(funcionario.getNome());
+        tfatualizarEndereco.setText(funcionario.getEndereco());
+        tfatualizarTelefone.setText(funcionario.getTelefone());
+        tfatualizarCPF.setText(funcionario.getCpf());
+        dtatualizarData.setValue(funcionario.getDt_nascimento());
+    }
+
     @FXML
     void btnatualizarFunclick(ActionEvent event) {
-
         try {
             funcionario.setNome(tfatualizarNome.getText());
             funcionario.setEndereco(tfatualizarEndereco.getText());
@@ -77,19 +79,8 @@ public class TelaAtualizarFuncionarioController {
     }
 
     @FXML
-    void btnsairatualizarFunclick(ActionEvent event) throws IOException {
-
-        URL url = getClass().getResource("/view/MenuAdmin.fxml");
-        Parent root = FXMLLoader.load(url);
-
-        Stage stgMenuAdmin = new Stage();
-        stgMenuAdmin.setTitle("Menu Admin");
-        stgMenuAdmin.setScene(new Scene(root));
-        stgMenuAdmin.show();
-
-        Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        telaAtual.close();
-
+    void btnsairatualizarFunclick(ActionEvent event) {
+        Stage stage = (Stage) btnsairatualizarFun.getScene().getWindow();
+        stage.close();
     }
-
 }
