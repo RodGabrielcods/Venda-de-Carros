@@ -59,7 +59,41 @@ public class TelaCadastrarFuncionarioController {
                 alertErro.setHeaderText("Erro de Validação");
                 alertErro.setContentText("Todos os campos devem ser preenchidos corretamente!");
                 alertErro.show();
+                return;
             }
+
+            if (tftelefun.getText().trim().isEmpty() || !tftelefun.getText().matches("\\d+")
+                    || tftelefun.getText().length() < 11 || tftelefun.getText().length() > 11) {
+                alertErro.setHeaderText("Erro de Validação");
+                alertErro.setContentText("O telefone deve conter apenas números deve conter 11 dígitos.");
+                alertErro.show();
+                return;
+            }
+
+            if (tfnomefun.getText().trim().isEmpty() || tfnomefun.getText().matches(".*\\d.*")) {
+                alertErro.setHeaderText("Erro de Validação");
+                alertErro.setContentText("O nome deve conter apenas letras.");
+                alertErro.show();
+                return;
+            }
+
+            if (tftelefun.getText().trim().isEmpty() || !tftelefun.getText().matches("\\d+")
+                    || tfcpffun.getText().length() < 11 || tfcpffun.getText().length() > 11) {
+                alertErro.setHeaderText("Erro de Validação");
+                alertErro.setContentText("O cpf deve conter apenas números deve conter 11 dígitos.");
+                alertErro.show();
+                return;
+            }
+
+            if (dtfun.getValue().isAfter(java.time.LocalDate.now())) {
+
+                alertErro.setHeaderText("Erro de Validação");
+                alertErro.setContentText("A data de nascimento não pode ser uma data futura.");
+                alertErro.show();
+                return;
+
+            }
+
         } catch (NumberFormatException e) {
             alertErro.setHeaderText("Erro de Validação");
             alertErro.setContentText("Todos os campos devem ser preenchidos corretamente!");
