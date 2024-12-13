@@ -13,26 +13,26 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="781.0" prefWidth="1205.0" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaAtualizarFuncionarioController">
    <children>
-      <Pane layoutY="-4.0" prefHeight="789.0" prefWidth="461.0" style="-fx-background-color: #0083ff;">
+      <Pane layoutX="-91.0" layoutY="-20.0" prefHeight="853.0" prefWidth="530.0" style="-fx-background-color: #0c161f; -fx-background-radius: 100;">
          <children>
-            <Label layoutX="53.0" layoutY="332.0" text="Atualizar" textFill="WHITE">
+            <Label layoutX="159.0" layoutY="360.0" text="Atualizar" textFill="WHITE">
                <font>
                   <Font name="Arial Rounded MT Bold" size="63.0" />
                </font>
             </Label>
-            <Label layoutX="77.0" layoutY="395.0" text="Funcionario">
+            <Label layoutX="126.0" layoutY="424.0" text="Funcionario" textFill="WHITE">
                <font>
                   <Font name="Arial Rounded MT Bold" size="59.0" />
                </font>
             </Label>
          </children>
       </Pane>
-      <Label layoutX="698.0" layoutY="44.0" text="Informações" textFill="#0088ff">
+      <Label layoutX="698.0" layoutY="44.0" text="Informações" textFill="#0c161f">
          <font>
             <Font name="Arial Rounded MT Bold" size="51.0" />
          </font>
       </Label>
-      <Button fx:id="btnatualizarFun" layoutX="869.0" layoutY="633.0" mnemonicParsing="false" onAction="#btnatualizarFunclick" style="-fx-background-color: #0083ff; -fx-background-radius: 100px;" text="Atualizar" textFill="WHITE">
+      <Button fx:id="btnatualizarFun" layoutX="869.0" layoutY="633.0" mnemonicParsing="false" onAction="#btnatualizarFunclick" style="-fx-background-color: #0c161f; -fx-background-radius: 100px;" text="Atualizar" textFill="WHITE">
          <font>
             <Font name="Arial Rounded MT Bold" size="37.0" />
          </font>
@@ -42,7 +42,7 @@
             <Font name="Arial Rounded MT Bold" size="37.0" />
          </font>
       </Button>
-      <Label layoutX="712.0" layoutY="93.0" text="Funcionario">
+      <Label layoutX="712.0" layoutY="93.0" text="Funcionario" textFill="#0c161f">
          <font>
             <Font name="Arial Rounded MT Bold" size="49.0" />
          </font>
@@ -51,7 +51,7 @@
          <children>
             <HBox prefHeight="66.0" prefWidth="461.0">
                <children>
-                  <Label text="Nome:">
+                  <Label text="Nome:" textFill="#0c161f">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="51.0" />
                      </font>
@@ -71,7 +71,7 @@
             </HBox>
             <HBox prefHeight="66.0" prefWidth="548.0">
                <children>
-                  <Label text="Endereço: ">
+                  <Label text="Endereço: " textFill="#0c161f">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="51.0" />
                      </font>
@@ -91,7 +91,7 @@
             </HBox>
             <HBox prefHeight="66.0" prefWidth="640.0">
                <children>
-                  <Label text="CPF:">
+                  <Label text="CPF:" textFill="#0c161f">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="43.0" />
                      </font>
@@ -114,7 +114,7 @@
             </HBox>
             <HBox prefHeight="66.0" prefWidth="565.0">
                <children>
-                  <Label prefHeight="60.0" prefWidth="259.0" text="Telefone:">
+                  <Label prefHeight="60.0" prefWidth="259.0" text="Telefone:" textFill="#0c161f">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="51.0" />
                      </font>
@@ -134,7 +134,7 @@
             </HBox>
             <HBox prefHeight="66.0" prefWidth="685.0">
                <children>
-                  <Label prefHeight="60.0" prefWidth="379.0" text="Data Nascimento:">
+                  <Label prefHeight="60.0" prefWidth="379.0" text="Data Nascimento:" textFill="#0c161f">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="43.0" />
                      </font>
