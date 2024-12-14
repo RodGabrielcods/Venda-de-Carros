@@ -2,6 +2,7 @@ package controller;
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
 
 import dao.VeiculoDao;
 import javafx.event.ActionEvent;
@@ -72,7 +73,55 @@ public class TelaCadastroVeiculo {
                 alertErro.setHeaderText("Erro de Validação");
                 alertErro.setContentText("Todos os campos devem ser preenchidos corretamente!");
                 alertErro.show();
+                return;
             }
+
+            if (tfPlaca.getText().length()!= 7) {
+                veiculo.setPlaca(null);
+                alertErro.setHeaderText("Erro de Validação");
+                alertErro.setContentText("A placa do veículo deve ter 7 digitos.");
+                alertErro.show();
+                return;
+            }
+
+            if (!tfAno.getText().matches("\\d+")) {
+                alertErro.setHeaderText("Erro de Validação");
+                alertErro.setContentText("O ano do veículo deve conter apenas números.");
+                alertErro.show();
+                return;
+            }
+
+            int ano = Integer.parseInt(tfAno.getText());
+
+            if (ano > java.time.LocalDate.now().getYear()) {
+                alertErro.setHeaderText("Erro de Validação");
+                alertErro.setContentText("O ano do veículo não pode ser maior que o ano atual.");
+                alertErro.show();
+                return;
+            }
+
+            if (tfMarca.getText().matches(".*\\d.*")) {
+                alertErro.setHeaderText("Erro de Validação");
+                alertErro.setContentText("A marca do veiculo deve conter apenas letras.");
+                alertErro.show();
+                return;
+            }
+
+            if (tfCor.getText().matches(".*\\d.*")) {
+                alertErro.setHeaderText("Erro de Validação");
+                alertErro.setContentText("A cor do veiculo deve conter apenas letras.");
+                alertErro.show();
+                return;
+            }
+
+            if (tfModel.getText().matches(".*\\d.*")) {
+                alertErro.setHeaderText("Erro de Validação");
+                alertErro.setContentText("O modelo do veiculo deve conter apenas letras.");
+                alertErro.show();
+                return;
+            }
+
+
         } catch (NumberFormatException e) {
             veiculo.setPlaca(null);
             alertErro.setHeaderText("Erro de Validação");

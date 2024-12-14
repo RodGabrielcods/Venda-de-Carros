@@ -33,7 +33,7 @@
             </ImageView>
          </children>
       </Pane>
-      <HBox layoutX="366.0" layoutY="212.0" prefHeight="50.0" prefWidth="400.0">
+      <HBox layoutX="369.0" layoutY="175.0" prefHeight="50.0" prefWidth="400.0">
          <children>
             <Label prefHeight="36.0" prefWidth="109.0" text="Nome:">
                <font>
@@ -116,17 +116,17 @@
             <DatePicker fx:id="dtfun" prefHeight="34.0" prefWidth="200.0" />
          </children>
       </HBox>
-      <Button fx:id="btncadastrarfuncionario" layoutX="627.0" layoutY="479.0" mnemonicParsing="false" onAction="#btncadastrarfuncionarioclick" style="-fx-background-color: #0c161f; -fx-background-radius: 100;" text="Cadastrar" textFill="WHITE">
+      <Button fx:id="btncadastrarfuncionario" layoutX="613.0" layoutY="479.0" mnemonicParsing="false" onAction="#btncadastrarfuncionarioclick" style="-fx-background-color: #0c161f; -fx-background-radius: 100;" text="Cadastrar" textFill="WHITE">
          <font>
-            <Font name="Arial Rounded MT Bold" size="22.0" />
+            <Font name="Arial Rounded MT Bold" size="26.0" />
          </font>
       </Button>
       <Button fx:id="btnsaircadastrarfuncionario" layoutX="398.0" layoutY="479.0" mnemonicParsing="false" onAction="#btnsaircadastrarfuncionarioclick" style="-fx-background-color: red; -fx-background-radius: 100;" text="Voltar" textFill="WHITE">
          <font>
-            <Font name="Arial Rounded MT Bold" size="22.0" />
+            <Font name="Arial Rounded MT Bold" size="26.0" />
          </font>
       </Button>
-      <HBox layoutX="366.0" layoutY="156.0" prefHeight="50.0" prefWidth="400.0">
+      <HBox layoutX="369.0" layoutY="225.0" prefHeight="50.0" prefWidth="400.0">
          <children>
             <Label prefHeight="36.0" prefWidth="225.0" text="Endereço:">
                <font>

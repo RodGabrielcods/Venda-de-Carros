@@ -26,7 +26,7 @@
             </ImageView>
          </children>
       </Pane>
-      <Button fx:id="btnadlistarveiculo" layoutX="785.0" layoutY="291.0" mnemonicParsing="false" onAction="#btnadlistarveiculoclick" prefHeight="54.0" prefWidth="206.0" style="-fx-background-color: #0c161f; -fx-background-radius: 100;" text="Estoque" textFill="WHITE">
+      <Button fx:id="btnadlistarveiculo" layoutX="777.0" layoutY="364.0" mnemonicParsing="false" onAction="#btnadlistarveiculoclick" prefHeight="54.0" prefWidth="206.0" style="-fx-background-color: #0c161f; -fx-background-radius: 100;" text="Estoque" textFill="WHITE">
          <font>
             <Font name="Arial Rounded MT Bold" size="29.0" />
          </font>
@@ -46,7 +46,7 @@
             <Font name="Arial Rounded MT Bold" size="45.0" />
          </font>
       </Label>
-      <Button fx:id="btnadcadastrarveiculo" layoutX="785.0" layoutY="364.0" mnemonicParsing="false" onAction="#btnadcadastrarveiculoclick" prefHeight="54.0" prefWidth="206.0" style="-fx-background-color: #0c161f; -fx-background-radius: 100;" text="Cadastrar" textFill="WHITE">
+      <Button fx:id="btnadcadastrarveiculo" layoutX="777.0" layoutY="280.0" mnemonicParsing="false" onAction="#btnadcadastrarveiculoclick" prefHeight="54.0" prefWidth="206.0" style="-fx-background-color: #0c161f; -fx-background-radius: 100;" text="Cadastrar" textFill="WHITE">
          <font>
             <Font name="Arial Rounded MT Bold" size="29.0" />
          </font>
