@@ -4,8 +4,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 
-import dao.FuncionarioDao;
-import dao.UsuarioDao;
 import dao.VeiculoDao;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

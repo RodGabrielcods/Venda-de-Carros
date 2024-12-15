@@ -20,7 +20,6 @@ public class App extends Application {
             usuario.setSenha("admin");
             UsuarioDao.cadastrar(usuario);
         }
-
         launch(args);
     }
 
@@ -30,6 +29,7 @@ public class App extends Application {
         Parent root = FXMLLoader.load(url);
         primaryStage.setTitle("Login");
         primaryStage.setScene(new Scene(root));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 }

@@ -10,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import model.SessaoUsuario;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
@@ -42,16 +43,29 @@ public class TelaCadastroVeiculo {
 
     @FXML
     void btnsaircadastro(ActionEvent event) throws IOException {
-        URL url = getClass().getResource("/view/TelaMenu.fxml");
-        Parent root = FXMLLoader.load(url);
+        if (SessaoUsuario.getNomeUsuario().equals("admin")) {
+            URL url = getClass().getResource("/view/MenuAdmin.fxml");
+            Parent root = FXMLLoader.load(url);
 
-        Stage stgMenu = new Stage();
-        stgMenu.setTitle("Menu");
-        stgMenu.setScene(new Scene(root));
-        stgMenu.show();
+            Stage stgMenuAdmin = new Stage();
+            stgMenuAdmin.setTitle("Menu Admin");
+            stgMenuAdmin.setScene(new Scene(root));
+            stgMenuAdmin.show();
 
-        Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        telaAtual.close();
+            Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            telaAtual.close();
+        } else {
+            URL url = getClass().getResource("/view/TelaMenu.fxml");
+            Parent root = FXMLLoader.load(url);
+
+            Stage stgMenu = new Stage();
+            stgMenu.setTitle("Menu");
+            stgMenu.setScene(new Scene(root));
+            stgMenu.show();
+
+            Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            telaAtual.close();
+        }
     }
 
     @FXML

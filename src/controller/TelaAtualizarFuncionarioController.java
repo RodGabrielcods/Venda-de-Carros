@@ -1,14 +1,22 @@
 package controller;
 
+import java.io.IOException;
+import java.net.URL;
+
 import dao.FuncionarioDao;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import model.Funcionario;
+import model.SessaoUsuario;
 
 public class TelaAtualizarFuncionarioController {
 
@@ -58,21 +66,21 @@ public class TelaAtualizarFuncionarioController {
                 return;
             }
 
-            if (!tfatualizarTelefone.getText().matches("\\d+") || tfatualizarTelefone.getText().length() != 11) {
+            if (!tfatualizarTelefone.getText().matches("\d+") || tfatualizarTelefone.getText().length() != 11) {
                 alertErro.setHeaderText("Erro de Validação");
-                alertErro.setContentText("O telefone deve conter apenas números e ter 11 dígitos.");
+                alertErro.setContentText("O telefone deve conter apenas números e 11 dígitos.");
                 alertErro.show();
                 return;
             }
 
-            if (tfatualizarNome.getText().matches(".*\\d.*")) {
+            if (tfatualizarNome.getText().matches(".*\d.*")) {
                 alertErro.setHeaderText("Erro de Validação");
                 alertErro.setContentText("O nome deve conter apenas letras.");
                 alertErro.show();
                 return;
             }
 
-            if (!tfatualizarCPF.getText().matches("\\d+") || tfatualizarCPF.getText().length() != 11) {
+            if (!tfatualizarCPF.getText().matches("\d+") || tfatualizarCPF.getText().length() != 11) {
                 alertErro.setHeaderText("Erro de Validação");
                 alertErro.setContentText("O CPF deve conter apenas números e ter 11 dígitos.");
                 alertErro.show();
@@ -86,7 +94,7 @@ public class TelaAtualizarFuncionarioController {
                 return;
             }
 
-            if (tfatualizarEndereco.getText().matches(".*\\d.*")) {
+            if (tfatualizarEndereco.getText().matches(".*\d.*")) {
                 alertErro.setHeaderText("Erro de Validação");
                 alertErro.setContentText("O endereço do funcionário deve conter apenas letras.");
                 alertErro.show();
@@ -123,8 +131,31 @@ public class TelaAtualizarFuncionarioController {
     }
 
     @FXML
-    void btnsairatualizarFunclick(ActionEvent event) {
-        Stage stage = (Stage) btnsairatualizarFun.getScene().getWindow();
-        stage.close();
+    void btnsairatualizarFunclick(ActionEvent event) throws IOException {
+        if (SessaoUsuario.getNomeUsuario().equals("admin")) {
+            URL url = getClass().getResource("/view/MenuAdmin.fxml");
+            Parent root = FXMLLoader.load(url);
+
+            Stage stgMenuAdmin = new Stage();
+            stgMenuAdmin.setTitle("Menu Admin");
+            stgMenuAdmin.setScene(new Scene(root));
+            stgMenuAdmin.setResizable(false);
+            stgMenuAdmin.show();
+
+            Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            telaAtual.close();
+        } else {
+            URL url = getClass().getResource("/view/TelaMenu.fxml");
+            Parent root = FXMLLoader.load(url);
+
+            Stage stgMenu = new Stage();
+            stgMenu.setTitle("Menu");
+            stgMenu.setScene(new Scene(root));
+            stgMenu.setResizable(false);
+            stgMenu.show();
+
+            Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            telaAtual.close();
+        }
     }
 }

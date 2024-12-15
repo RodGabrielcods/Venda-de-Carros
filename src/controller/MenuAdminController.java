@@ -50,6 +50,7 @@ public class MenuAdminController {
         Stage stgAtualizar = new Stage();
         stgAtualizar.setTitle("Tela Atualizar");
         stgAtualizar.setScene(new Scene(root));
+        stgAtualizar.setResizable(false);
         stgAtualizar.show();
 
         Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -67,6 +68,7 @@ public class MenuAdminController {
         Stage stgCadastroVeiculo = new Stage();
         stgCadastroVeiculo.setTitle("Tela Cadastro Veiculo");
         stgCadastroVeiculo.setScene(new Scene(root));
+        stgCadastroVeiculo.setResizable(false);
         stgCadastroVeiculo.show();
 
         Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -84,6 +86,7 @@ public class MenuAdminController {
         Stage stgEstoque = new Stage();
         stgEstoque.setTitle("Tela Estoque");
         stgEstoque.setScene(new Scene(root));
+        stgEstoque.setResizable(false);
         stgEstoque.show();
 
         Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -101,6 +104,7 @@ public class MenuAdminController {
         Stage stgRemover = new Stage();
         stgRemover.setTitle("Tela Remover veiculo");
         stgRemover.setScene(new Scene(root));
+        stgRemover.setResizable(false);
         stgRemover.show();
 
         Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -118,6 +122,7 @@ public class MenuAdminController {
         Stage StgLogin = new Stage();
         StgLogin.setTitle("Login");
         StgLogin.setScene(new Scene(root));
+        StgLogin.setResizable(false);
         StgLogin.show();
 
         Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -134,6 +139,7 @@ public class MenuAdminController {
         Stage stgAtualizarFuncionario = new Stage();
         stgAtualizarFuncionario.setTitle("Atualizar Dados");
         stgAtualizarFuncionario.setScene(new Scene(root));
+        stgAtualizarFuncionario.setResizable(false);
         stgAtualizarFuncionario.show();
 
         Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -151,6 +157,7 @@ public class MenuAdminController {
         Stage stgListaFun = new Stage();
         stgListaFun.setTitle("Lista de Funcionario");
         stgListaFun.setScene(new Scene(root));
+        stgListaFun.setResizable(false);
         stgListaFun.show();
 
         Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -168,6 +175,7 @@ public class MenuAdminController {
         Stage stgCadastrarFun = new Stage();
         stgCadastrarFun.setTitle("Tela Cadastrar Funcionario");
         stgCadastrarFun.setScene(new Scene(root));
+        stgCadastrarFun.setResizable(false);
         stgCadastrarFun.show();
 
         Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -185,6 +193,7 @@ public class MenuAdminController {
         Stage stgRemoverFun = new Stage();
         stgRemoverFun.setTitle("Tela Remover Funcionario");
         stgRemoverFun.setScene(new Scene(root));
+        stgRemoverFun.setResizable(false);
         stgRemoverFun.show();
 
         Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
