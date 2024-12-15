@@ -35,6 +35,7 @@ public class TelaMenuController {
         Stage stgAtualizar = new Stage();
         stgAtualizar.setTitle("Atualizar Dados");
         stgAtualizar.setScene(new Scene (root));
+        stgAtualizar.setResizable(false);
         stgAtualizar.show();
 
         Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -49,6 +50,7 @@ public class TelaMenuController {
         Stage stgCadastro = new Stage();
         stgCadastro.setTitle("Cadastro Veiculo");
         stgCadastro.setScene(new Scene (root));
+        stgCadastro.setResizable(false);
         stgCadastro.show();
 
         Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -64,6 +66,7 @@ public class TelaMenuController {
         Stage sgtEstoque = new Stage();
         sgtEstoque.setTitle("Veiculos em Estoque");
         sgtEstoque.setScene(new Scene (root));
+        sgtEstoque.setResizable(false);
         sgtEstoque.show();
 
         Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -79,6 +82,7 @@ public class TelaMenuController {
         Stage stgLogin = new Stage();
         stgLogin.setTitle("Login");
         stgLogin.setScene(new Scene (root));
+        stgLogin.setResizable(false);
         stgLogin.show();
 
         Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();

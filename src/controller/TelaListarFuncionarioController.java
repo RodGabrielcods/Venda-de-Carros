@@ -117,6 +117,7 @@ public class TelaListarFuncionarioController {
             Stage stage = new Stage();
             stage.setTitle("Atualizar Funcionario");
             stage.setScene(new Scene(root));
+            stage.setResizable(false);
             stage.show();
 
             Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -152,6 +153,7 @@ public class TelaListarFuncionarioController {
         Stage stgMenuAdmin = new Stage();
         stgMenuAdmin.setTitle("Menu Admin");
         stgMenuAdmin.setScene(new Scene(root));
+        stgMenuAdmin.setResizable(false);
         stgMenuAdmin.show();
 
         Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();

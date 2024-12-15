@@ -40,6 +40,7 @@ public class TelaRemoverFuncionarioController {
         Stage stgMenuAdmin = new Stage();
         stgMenuAdmin.setTitle("Menu Admin");
         stgMenuAdmin.setScene(new Scene(root));
+        stgMenuAdmin.setResizable(false);
         stgMenuAdmin.show();
 
         Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();

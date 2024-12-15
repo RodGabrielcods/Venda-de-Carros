@@ -44,6 +44,7 @@ public class TelaCarrosController {
                 Stage stgVendas = new Stage();
                 stgVendas.setTitle("Menu Admin");
                 stgVendas.setScene(new Scene(root));
+                stgVendas.setResizable(false);
                 stgVendas.show();
             } else {
                 URL url = getClass().getResource("/view/TelaMenu.fxml");
@@ -52,6 +53,7 @@ public class TelaCarrosController {
                 Stage stgMenu = new Stage();
                 stgMenu.setTitle("Menu");
                 stgMenu.setScene(new Scene(root));
+                stgMenu.setResizable(false);
                 stgMenu.show();
             }
 
@@ -74,6 +76,7 @@ public class TelaCarrosController {
         Stage stgVendas = new Stage();
         stgVendas.setTitle("Menu");
         stgVendas.setScene(new Scene(root));
+        stgVendas.setResizable(false);
         stgVendas.show();
 
         Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();

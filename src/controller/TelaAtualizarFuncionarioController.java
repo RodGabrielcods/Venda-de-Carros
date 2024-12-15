@@ -66,21 +66,21 @@ public class TelaAtualizarFuncionarioController {
                 return;
             }
 
-            if (!tfatualizarTelefone.getText().matches("\d+") || tfatualizarTelefone.getText().length() != 11) {
+            if (!tfatualizarTelefone.getText().matches("\\d+") || tfatualizarTelefone.getText().length() != 11) {
                 alertErro.setHeaderText("Erro de Validação");
                 alertErro.setContentText("O telefone deve conter apenas números e 11 dígitos.");
                 alertErro.show();
                 return;
             }
 
-            if (tfatualizarNome.getText().matches(".*\d.*")) {
+            if (tfatualizarNome.getText().matches(".*\\d.*")) {
                 alertErro.setHeaderText("Erro de Validação");
                 alertErro.setContentText("O nome deve conter apenas letras.");
                 alertErro.show();
                 return;
             }
 
-            if (!tfatualizarCPF.getText().matches("\d+") || tfatualizarCPF.getText().length() != 11) {
+            if (!tfatualizarCPF.getText().matches("\\d+") || tfatualizarCPF.getText().length() != 11) {
                 alertErro.setHeaderText("Erro de Validação");
                 alertErro.setContentText("O CPF deve conter apenas números e ter 11 dígitos.");
                 alertErro.show();
@@ -94,7 +94,7 @@ public class TelaAtualizarFuncionarioController {
                 return;
             }
 
-            if (tfatualizarEndereco.getText().matches(".*\d.*")) {
+            if (tfatualizarEndereco.getText().matches(".*\\d.*")) {
                 alertErro.setHeaderText("Erro de Validação");
                 alertErro.setContentText("O endereço do funcionário deve conter apenas letras.");
                 alertErro.show();

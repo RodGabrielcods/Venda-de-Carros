@@ -61,6 +61,7 @@ public class TelaCadastroVeiculo {
             Stage stgMenu = new Stage();
             stgMenu.setTitle("Menu");
             stgMenu.setScene(new Scene(root));
+            stgMenu.setResizable(false);
             stgMenu.show();
 
             Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
