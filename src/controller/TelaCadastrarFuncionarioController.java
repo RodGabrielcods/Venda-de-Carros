@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 
 import dao.FuncionarioDao;
+import dao.UsuarioDao;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,6 +18,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import model.Funcionario;
+import model.Usuario;
 
 public class TelaCadastrarFuncionarioController {
 
@@ -44,6 +46,7 @@ public class TelaCadastrarFuncionarioController {
     @FXML
     void btncadastrarfuncionarioclick(ActionEvent event) {
         Funcionario funcionario = new Funcionario();
+        Usuario usuario = new Usuario();
         Alert alertErro = new Alert(AlertType.WARNING);
 
         try {
@@ -52,6 +55,9 @@ public class TelaCadastrarFuncionarioController {
             funcionario.setTelefone(tftelefun.getText().trim());
             funcionario.setDt_nascimento(dtfun.getValue());
             funcionario.setCpf(tfcpffun.getText().trim());
+
+            usuario.setNome_usuario(funcionario.getCpf().trim());
+            usuario.setSenha("#Fun123");
 
             if (tfcpffun.getText().isEmpty() || tfnomefun.getText().isEmpty() || tftelefun.getText().isEmpty()
                     || tfenderefun.getText().isEmpty()) {
@@ -108,10 +114,10 @@ public class TelaCadastrarFuncionarioController {
         }
 
         Alert alertConfCadastro;
-        if (FuncionarioDao.cadastrar(funcionario)) {
+        if (FuncionarioDao.cadastrar(funcionario) && UsuarioDao.cadastrar(usuario)) {
             alertConfCadastro = new Alert(AlertType.INFORMATION);
             alertConfCadastro.setHeaderText("Situação do Cadastro");
-            alertConfCadastro.setContentText("Funcionário cadastrado com sucesso!");
+            alertConfCadastro.setContentText("Funcionário e Usuário cadastrado com sucesso!");
 
             tfcpffun.clear();
             tfenderefun.clear();

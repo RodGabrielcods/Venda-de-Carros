@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import jdbc.ConexaoMySql;
-import model.Funcionario;
 import model.Veiculo;
 
 public class VeiculoDao {
@@ -65,16 +64,16 @@ public class VeiculoDao {
     }
 
     public static boolean atualizarVeiculo(Veiculo veiculo) {
-        String sql = "UPDATE Veiculo SET marca = ?, modelo = ?, ano = ?, cor = ?, placa = ? WHERE idFuncionario = ?";
+        String sql = "UPDATE Veiculo SET marca = ?, modelo = ?, ano = ?, cor = ?, placa = ? WHERE idVeiculo = ?";
     
         try (Connection con = ConexaoMySql.getConexao();
              PreparedStatement ps = con.prepareStatement(sql)) {
     
-            ps.setInt(1, veiculo.getAno());
-            ps.setString(2, veiculo.getMarca());
-            ps.setString(3, veiculo.getModelo());
-            ps.setObject(4, veiculo.getPlaca());
-            ps.setString(5, veiculo.getCor());
+            ps.setString(1, veiculo.getMarca());
+            ps.setString(2, veiculo.getModelo());
+            ps.setInt(3, veiculo.getAno());
+            ps.setString(4, veiculo.getCor());
+            ps.setString(5, veiculo.getPlaca());
             ps.setInt(6, veiculo.getIdVeiculo());
     
             return ps.executeUpdate() > 0;
@@ -84,5 +83,21 @@ public class VeiculoDao {
             return false;
         }
     }
+
+
+    public static boolean excluir(int idVeiculo) {
+        String sql = "DELETE FROM Veiculo WHERE idveiculo = ?";
+        try (Connection con = ConexaoMySql.getConexao();
+                PreparedStatement ps = con.prepareStatement(sql)) {
+
+            ps.setInt(1, idVeiculo);
+            return ps.executeUpdate() > 0;
+
+        } catch (SQLException e) {
+            System.out.println("ERRO AO EXCLUIR: " + e.getMessage());
+            return false;
+        }
+    }
+    
 
 }

@@ -35,8 +35,8 @@
         <columns>
           <TableColumn fx:id="colNome" prefWidth="150.0" text="Nome" />
           <TableColumn fx:id="colEndereco" prefWidth="137.0" text="Endereco" />
-            <TableColumn fx:id="colTelefone" prefWidth="163.0" text="CPF" />
-            <TableColumn fx:id="colCpf" prefWidth="161.0" text="Telefone" />
+            <TableColumn fx:id="colTelefone" prefWidth="163.0" text="Telefone" />
+            <TableColumn fx:id="colCpf" prefWidth="161.0" text="CPF" />
             <TableColumn fx:id="colDataNascimento" prefWidth="145.0" text="Data Nascimento" />
             <TableColumn fx:id="colIDFun" prefWidth="48.0" style="-fx-border-radius: 30;" text="ID" />
         </columns>

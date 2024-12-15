@@ -27,4 +27,37 @@ public class UsuarioDao {
             return false;
         }
     }
+
+    public static boolean verificarUsuario(String nome_usuario, String senha) {
+        String sql = "SELECT * FROM Usuario WHERE nome_usuario = ? AND senha = ?";
+
+        try (Connection con = ConexaoMySql.getConexao()) {
+            PreparedStatement ps = con.prepareStatement(sql);
+
+            ps.setString(1, nome_usuario);
+            ps.setString(2, senha);
+
+            return ps.executeQuery().next();
+        } catch (Exception e) {
+            System.out.println("ERRO: " + e.getMessage());
+            return false;
+        }
+    }
+
+    public static boolean verificarAdministrador() {
+        String sql = "SELECT * FROM Usuario WHERE nome_usuario = 'admin' AND senha = 'admin'";
+        
+        try (Connection con = ConexaoMySql.getConexao()) {
+            PreparedStatement ps = con.prepareStatement(sql);
+
+            return ps.executeQuery().next();
+
+        } catch (SQLException e) {
+            System.out.println("ERRO: " + e.getMessage());
+            return false;
+        }
+    }
+
+    
+
 }

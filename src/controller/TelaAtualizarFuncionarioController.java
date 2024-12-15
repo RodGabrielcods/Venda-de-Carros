@@ -47,11 +47,56 @@ public class TelaAtualizarFuncionarioController {
 
     @FXML
     void btnatualizarFunclick(ActionEvent event) {
+        Alert alertErro = new Alert(Alert.AlertType.WARNING);
+
         try {
-            funcionario.setNome(tfatualizarNome.getText());
-            funcionario.setEndereco(tfatualizarEndereco.getText());
-            funcionario.setTelefone(tfatualizarTelefone.getText());
-            funcionario.setCpf(tfatualizarCPF.getText());
+            if (tfatualizarCPF.getText().isEmpty() || tfatualizarNome.getText().isEmpty()
+                    || tfatualizarTelefone.getText().isEmpty() || tfatualizarEndereco.getText().isEmpty()) {
+                alertErro.setHeaderText("Erro de Validação");
+                alertErro.setContentText("Todos os campos devem ser preenchidos corretamente!");
+                alertErro.show();
+                return;
+            }
+
+            if (!tfatualizarTelefone.getText().matches("\\d+") || tfatualizarTelefone.getText().length() != 11) {
+                alertErro.setHeaderText("Erro de Validação");
+                alertErro.setContentText("O telefone deve conter apenas números e ter 11 dígitos.");
+                alertErro.show();
+                return;
+            }
+
+            if (tfatualizarNome.getText().matches(".*\\d.*")) {
+                alertErro.setHeaderText("Erro de Validação");
+                alertErro.setContentText("O nome deve conter apenas letras.");
+                alertErro.show();
+                return;
+            }
+
+            if (!tfatualizarCPF.getText().matches("\\d+") || tfatualizarCPF.getText().length() != 11) {
+                alertErro.setHeaderText("Erro de Validação");
+                alertErro.setContentText("O CPF deve conter apenas números e ter 11 dígitos.");
+                alertErro.show();
+                return;
+            }
+
+            if (dtatualizarData.getValue() != null && dtatualizarData.getValue().isAfter(java.time.LocalDate.now())) {
+                alertErro.setHeaderText("Erro de Validação");
+                alertErro.setContentText("A data de nascimento não pode ser uma data futura.");
+                alertErro.show();
+                return;
+            }
+
+            if (tfatualizarEndereco.getText().matches(".*\\d.*")) {
+                alertErro.setHeaderText("Erro de Validação");
+                alertErro.setContentText("O endereço do funcionário deve conter apenas letras.");
+                alertErro.show();
+                return;
+            }
+
+            funcionario.setNome(tfatualizarNome.getText().trim());
+            funcionario.setEndereco(tfatualizarEndereco.getText().trim());
+            funcionario.setTelefone(tfatualizarTelefone.getText().trim());
+            funcionario.setCpf(tfatualizarCPF.getText().trim());
             funcionario.setDt_nascimento(dtatualizarData.getValue());
 
             boolean sucesso = FuncionarioDao.atualizar(funcionario);
@@ -70,11 +115,10 @@ public class TelaAtualizarFuncionarioController {
                 alert.setContentText("Não foi possível atualizar o funcionário.");
                 alert.show();
             }
-        } catch (Exception e) {
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.setHeaderText("Erro de Validação");
-            alert.setContentText("Preencha todos os campos corretamente!");
-            alert.show();
+        } catch (NumberFormatException e) {
+            alertErro.setHeaderText("Erro de Validação");
+            alertErro.setContentText("Preencha os campos corretamente.");
+            alertErro.show();
         }
     }
 
