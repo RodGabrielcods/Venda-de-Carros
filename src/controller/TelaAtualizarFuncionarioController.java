@@ -115,11 +115,11 @@ public class TelaAtualizarFuncionarioController {
                 alert.setContentText("Funcionário atualizado com sucesso!");
                 alert.show();
 
-                URL url = getClass().getResource("/view/MenuAdmin.fxml");
+                URL url = getClass().getResource("/view/TelaListarFuncionario.fxml");
                 Parent root = FXMLLoader.load(url);
 
                 Stage stgMenuAdmin = new Stage();
-                stgMenuAdmin.setTitle("Menu Admin");
+                stgMenuAdmin.setTitle("Listar Funcionario");
                 stgMenuAdmin.setScene(new Scene(root));
                 stgMenuAdmin.setResizable(false);
                 stgMenuAdmin.show();

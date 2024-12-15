@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 
+import dao.FuncionarioDao;
 import dao.VeiculoDao;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -17,8 +18,10 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import model.Funcionario;
 import model.SessaoUsuario;
 import model.Veiculo;
 
@@ -56,6 +59,9 @@ public class TelaEstoqueController {
 
     @FXML
     private TableView<Veiculo> tbestoque;
+
+    @FXML
+    private TextField tfFiltro;
 
     ObservableList<Veiculo> obscar;
 
@@ -129,11 +135,17 @@ public class TelaEstoqueController {
 
     @FXML
     void btnpesquisar(ActionEvent event) {
-        List<Veiculo> veiculoCadastrado = VeiculoDao.listar();
+        String termo = tfFiltro.getText().toLowerCase();
 
-        for (Veiculo veiculo : veiculoCadastrado) {
-            obscar.add(veiculo);
+        obscar.clear();
+
+        for (Veiculo veiculo : VeiculoDao.listar()) {
+            if (veiculo.getPlaca().toLowerCase().contains(termo)) {
+                obscar.add(veiculo);
+            }
         }
+
+        tbestoque.setItems(obscar);
     }
 
     @FXML
