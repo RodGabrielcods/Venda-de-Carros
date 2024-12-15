@@ -100,12 +100,6 @@ public class TelaCadastrarFuncionarioController {
 
             }
 
-            if (tfenderefun.getText().matches(".*\\d.*")) {
-                alertErro.setHeaderText("Erro de Validação");
-                alertErro.setContentText("O endereco do funcionario deve conter apenas letras.");
-                alertErro.show();
-                return;
-            }
 
         } catch (NumberFormatException e) {
             alertErro.setHeaderText("Erro de Validação");

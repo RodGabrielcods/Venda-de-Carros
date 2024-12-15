@@ -94,13 +94,6 @@ public class TelaAtualizarFuncionarioController {
                 return;
             }
 
-            if (tfatualizarEndereco.getText().matches(".*\\d.*")) {
-                alertErro.setHeaderText("Erro de Validação");
-                alertErro.setContentText("O endereço do funcionário deve conter apenas letras.");
-                alertErro.show();
-                return;
-            }
-
             funcionario.setNome(tfatualizarNome.getText().trim());
             funcionario.setEndereco(tfatualizarEndereco.getText().trim());
             funcionario.setTelefone(tfatualizarTelefone.getText().trim());
