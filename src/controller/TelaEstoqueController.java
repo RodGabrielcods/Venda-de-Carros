@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 
+import dao.FuncionarioDao;
 import dao.VeiculoDao;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -13,11 +14,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import model.Funcionario;
 import model.Veiculo;
 
 public class TelaEstoqueController {
@@ -73,12 +76,55 @@ public class TelaEstoqueController {
 
     @FXML
     void btnRemoverFunclick(ActionEvent event) {
+        Veiculo veiculoSelecionado = tbestoque.getSelectionModel().getSelectedItem();
+
+        if (veiculoSelecionado != null) {
+            boolean sucesso = FuncionarioDao.excluir(veiculoSelecionado.getIdVeiculo());
+
+            if (sucesso) {
+                obscar.remove(veiculoSelecionado);
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setHeaderText("Exclusão realizada");
+                alert.setContentText("Veiculo excluído com sucesso!");
+                alert.show();
+            } else {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setHeaderText("Erro");
+                alert.setContentText("Não foi possível excluir o Veiculo.");
+                alert.show();
+            }
+        } else {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setHeaderText("Seleção inválida");
+            alert.setContentText("Selecione um Veiculo para excluir.");
+            alert.show();
+        }
 
     }
 
     @FXML
-    void btnatualizarFunclick(ActionEvent event) {
+    void btnatualizarFunclick(ActionEvent event) throws IOException {
+        Veiculo funcionarveiculooSelecionado = tbestoque.getSelectionModel().getSelectedItem();
+        if (funcionarveiculooSelecionado != null) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/TelaAtualizar.fxml"));
+            Parent root = loader.load();
 
+            TelaAtualizarController controller = loader.getController();
+            controller.setVeiculo(funcionarveiculooSelecionado);
+
+            Stage stage = new Stage();
+            stage.setTitle("Atualizar Veiculo");
+            stage.setScene(new Scene(root));
+            stage.show();
+
+            Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            telaAtual.close();
+        } else {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setHeaderText("Seleção inválida");
+            alert.setContentText("Selecione um Veiculo para editar.");
+            alert.show();
+        }
     }
 
     @FXML

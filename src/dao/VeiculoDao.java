@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import jdbc.ConexaoMySql;
+import model.Funcionario;
 import model.Veiculo;
 
 public class VeiculoDao {
@@ -62,4 +63,26 @@ public class VeiculoDao {
             return null;
         }
     }
+
+    public static boolean atualizarVeiculo(Veiculo veiculo) {
+        String sql = "UPDATE Veiculo SET marca = ?, modelo = ?, ano = ?, cor = ?, placa = ? WHERE idFuncionario = ?";
+    
+        try (Connection con = ConexaoMySql.getConexao();
+             PreparedStatement ps = con.prepareStatement(sql)) {
+    
+            ps.setInt(1, veiculo.getAno());
+            ps.setString(2, veiculo.getMarca());
+            ps.setString(3, veiculo.getModelo());
+            ps.setObject(4, veiculo.getPlaca());
+            ps.setString(5, veiculo.getCor());
+            ps.setInt(6, veiculo.getIdVeiculo());
+    
+            return ps.executeUpdate() > 0;
+    
+        } catch (SQLException e) {
+            System.out.println("ERRO AO ATUALIZAR: " + e.getMessage());
+            return false;
+        }
+    }
+
 }
