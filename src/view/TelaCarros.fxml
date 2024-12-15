@@ -14,14 +14,14 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="810.0" style="-fx-background-color: #dad8d8;" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaCarrosController">
    <children>
-      <VBox layoutX="487.0" layoutY="187.0" prefHeight="105.0" prefWidth="247.0" AnchorPane.bottomAnchor="166.0">
+      <VBox layoutX="487.0" layoutY="187.0" prefHeight="132.0" prefWidth="281.0" AnchorPane.bottomAnchor="166.0">
          <children>
-            <TextField fx:id="tfuser" prefHeight="30.0" prefWidth="243.0" promptText="   User" style="-fx-border-style: solid; -fx-border-width: 2px; -fx-border-color: #0c161f; -fx-background-radius: 30; -fx-border-radius: 30;">
+            <TextField fx:id="tfuser" prefHeight="36.0" prefWidth="272.0" promptText="   User" style="-fx-border-style: solid; -fx-border-width: 2px; -fx-border-color: #0c161f; -fx-background-radius: 30; -fx-border-radius: 30;">
                <cursor>
                   <Cursor fx:constant="DEFAULT" />
                </cursor>
                <padding>
-                  <Insets bottom="1.0" />
+                  <Insets bottom="1.0" left="10.0" />
                </padding>
                <font>
                   <Font name="Arial Rounded MT Bold" size="25.0" />
@@ -30,12 +30,12 @@
                   <Insets bottom="30.0" />
                </VBox.margin>
             </TextField>
-            <TextField fx:id="tfsenha" prefHeight="28.0" prefWidth="243.0" promptText="   Password" style="-fx-border-style: solid; -fx-border-width: 2px; -fx-border-color: #0c161f; -fx-background-radius: 30; -fx-border-radius: 30;">
+            <TextField fx:id="tfsenha" prefHeight="36.0" prefWidth="266.0" promptText="   Password" style="-fx-border-style: solid; -fx-border-width: 2px; -fx-border-color: #0c161f; -fx-background-radius: 30; -fx-border-radius: 30;">
                <cursor>
                   <Cursor fx:constant="DEFAULT" />
                </cursor>
                <padding>
-                  <Insets bottom="1.0" />
+                  <Insets bottom="1.0" left="10.0" />
                </padding>
                <font>
                   <Font name="Arial Rounded MT Bold" size="25.0" />

@@ -31,14 +31,14 @@
             </TextField>
          </children>
       </Pane>
-      <TableView fx:id="tbFuncionario" layoutX="142.0" layoutY="236.0" prefHeight="387.0" prefWidth="718.0" style="-fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30;" AnchorPane.bottomAnchor="161.0" AnchorPane.leftAnchor="142.0" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="236.0">
+      <TableView fx:id="tbFuncionario" layoutX="79.0" layoutY="238.0" prefHeight="396.0" prefWidth="866.0" style="-fx-background-radius: 30; -fx-border-color: black; -fx-border-radius: 30;" stylesheets="@style.css" AnchorPane.bottomAnchor="159.0" AnchorPane.leftAnchor="79.0" AnchorPane.rightAnchor="65.0" AnchorPane.topAnchor="238.0">
         <columns>
           <TableColumn fx:id="colNome" prefWidth="150.0" text="Nome" />
           <TableColumn fx:id="colEndereco" prefWidth="137.0" text="Endereco" />
             <TableColumn fx:id="colTelefone" prefWidth="163.0" text="Telefone" />
-            <TableColumn fx:id="colCpf" prefWidth="161.0" text="CPF" />
-            <TableColumn fx:id="colDataNascimento" prefWidth="145.0" text="Data Nascimento" />
-            <TableColumn fx:id="colIDFun" prefWidth="48.0" style="-fx-border-radius: 30;" text="ID" />
+            <TableColumn fx:id="colCpf" prefWidth="151.0" text="CPF" />
+            <TableColumn fx:id="colDataNascimento" prefWidth="176.0" text="Data Nascimento" />
+            <TableColumn fx:id="colIDFun" prefWidth="46.0" style="-fx-border-radius: 30;" text="ID" />
         </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

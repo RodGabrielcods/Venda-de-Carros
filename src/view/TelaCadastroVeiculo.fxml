@@ -42,7 +42,7 @@
                   <Insets right="5.0" />
                </HBox.margin>
             </Label>
-            <TextField fx:id="tfMarca" prefHeight="34.0" prefWidth="292.0">
+            <TextField fx:id="tfMarca" prefHeight="34.0" prefWidth="292.0" stylesheets="@style.css">
                <HBox.margin>
                   <Insets top="5.0" />
                </HBox.margin>
@@ -59,7 +59,7 @@
                   <Insets right="5.0" />
                </HBox.margin>
             </Label>
-            <TextField fx:id="tfAno" prefHeight="34.0" prefWidth="323.0">
+            <TextField fx:id="tfAno" prefHeight="34.0" prefWidth="323.0" stylesheets="@style.css">
                <HBox.margin>
                   <Insets top="5.0" />
                </HBox.margin>
@@ -76,7 +76,7 @@
                   <Insets right="5.0" />
                </HBox.margin>
             </Label>
-            <TextField fx:id="tfPlaca" prefHeight="34.0" prefWidth="295.0">
+            <TextField fx:id="tfPlaca" prefHeight="34.0" prefWidth="295.0" stylesheets="@style.css">
                <HBox.margin>
                   <Insets top="5.0" />
                </HBox.margin>
@@ -93,7 +93,7 @@
                   <Insets right="5.0" />
                </HBox.margin>
             </Label>
-            <TextField fx:id="tfCor" prefHeight="34.0" prefWidth="324.0">
+            <TextField fx:id="tfCor" prefHeight="34.0" prefWidth="324.0" stylesheets="@style.css">
                <HBox.margin>
                   <Insets top="5.0" />
                </HBox.margin>
@@ -110,7 +110,7 @@
                   <Insets right="5.0" />
                </HBox.margin>
             </Label>
-            <TextField fx:id="tfModel" prefHeight="34.0" prefWidth="290.0">
+            <TextField fx:id="tfModel" prefHeight="34.0" prefWidth="290.0" stylesheets="@style.css">
                <HBox.margin>
                   <Insets top="5.0" />
                </HBox.margin>
@@ -122,12 +122,12 @@
             <Font name="Arial Rounded MT Bold" size="43.0" />
          </font>
       </Label>
-      <Button fx:id="btncadastro" layoutX="655.0" layoutY="476.0" mnemonicParsing="false" onAction="#tbncadastrar" style="-fx-background-color: #0c161f; -fx-background-radius: 100px;" text="Cadastrar" textFill="WHITE">
+      <Button fx:id="btncadastro" layoutX="611.0" layoutY="473.0" mnemonicParsing="false" onAction="#tbncadastrar" style="-fx-background-color: #0c161f; -fx-background-radius: 100px;" text="Cadastrar" textFill="WHITE">
          <font>
-            <Font name="Arial Rounded MT Bold" size="22.0" />
+            <Font name="Arial Rounded MT Bold" size="25.0" />
          </font>
       </Button>
-      <Button fx:id="btnsaircadastro" layoutX="393.0" layoutY="476.0" mnemonicParsing="false" onAction="#btnsaircadastro" style="-fx-background-color: red; -fx-background-radius: 100px;" text="Voltar" textFill="WHITE">
+      <Button fx:id="btnsaircadastro" layoutX="368.0" layoutY="476.0" mnemonicParsing="false" onAction="#btnsaircadastro" style="-fx-background-color: red; -fx-background-radius: 100px;" text="Voltar" textFill="WHITE">
          <font>
             <Font name="Arial Rounded MT Bold" size="22.0" />
          </font>

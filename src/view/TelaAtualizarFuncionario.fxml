@@ -47,7 +47,7 @@
             <Font name="Arial Rounded MT Bold" size="49.0" />
          </font>
       </Label>
-      <VBox layoutX="531.0" layoutY="170.0" prefHeight="473.0" prefWidth="865.0">
+      <VBox layoutX="531.0" layoutY="170.0" prefHeight="473.0" prefWidth="865.0" stylesheets="@style.css">
          <children>
             <HBox prefHeight="66.0" prefWidth="461.0">
                <children>
@@ -56,13 +56,10 @@
                         <Font name="Arial Rounded MT Bold" size="51.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="tfatualizarNome" prefHeight="46.0" prefWidth="399.0">
+                  <TextField fx:id="tfatualizarNome" prefHeight="48.0" prefWidth="424.0">
                      <HBox.margin>
-                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                        <Insets left="10.0" top="10.0" />
                      </HBox.margin>
-                     <padding>
-                        <Insets bottom="10.0" />
-                     </padding>
                      <font>
                         <Font name="Arial Rounded MT Bold" size="24.0" />
                      </font>
@@ -71,17 +68,14 @@
             </HBox>
             <HBox prefHeight="66.0" prefWidth="548.0">
                <children>
-                  <Label text="Endereço: " textFill="#0c161f">
+                  <Label prefHeight="60.0" prefWidth="271.0" text="Endereço: " textFill="#0c161f">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="51.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="tfatualizarEndereco" prefHeight="46.0" prefWidth="303.0">
-                     <padding>
-                        <Insets bottom="10.0" />
-                     </padding>
+                  <TextField fx:id="tfatualizarEndereco" prefHeight="48.0" prefWidth="326.0">
                      <HBox.margin>
-                        <Insets bottom="10.0" top="10.0" />
+                        <Insets top="10.0" />
                      </HBox.margin>
                      <font>
                         <Font name="Arial Rounded MT Bold" size="24.0" />
@@ -99,12 +93,9 @@
                         <Insets top="5.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField fx:id="tfatualizarCPF" prefHeight="39.0" prefWidth="444.0">
-                     <padding>
-                        <Insets bottom="10.0" />
-                     </padding>
+                  <TextField fx:id="tfatualizarCPF" prefHeight="48.0" prefWidth="486.0">
                      <HBox.margin>
-                        <Insets bottom="10.0" left="28.0" top="10.0" />
+                        <Insets left="10.0" top="10.0" />
                      </HBox.margin>
                      <font>
                         <Font name="Arial Rounded MT Bold" size="24.0" />
@@ -114,17 +105,14 @@
             </HBox>
             <HBox prefHeight="66.0" prefWidth="565.0">
                <children>
-                  <Label prefHeight="60.0" prefWidth="259.0" text="Telefone:" textFill="#0c161f">
+                  <Label prefHeight="60.0" prefWidth="235.0" text="Telefone:" textFill="#0c161f">
                      <font>
                         <Font name="Arial Rounded MT Bold" size="51.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="tfatualizarTelefone" prefHeight="46.0" prefWidth="313.0">
-                     <padding>
-                        <Insets bottom="10.0" />
-                     </padding>
+                  <TextField fx:id="tfatualizarTelefone" prefHeight="48.0" prefWidth="355.0">
                      <HBox.margin>
-                        <Insets bottom="10.0" top="10.0" />
+                        <Insets left="10.0" top="10.0" />
                      </HBox.margin>
                      <font>
                         <Font name="Arial Rounded MT Bold" size="24.0" />
@@ -139,14 +127,13 @@
                         <Font name="Arial Rounded MT Bold" size="43.0" />
                      </font>
                   </Label>
-                  <DatePicker fx:id="dtatualizarData" prefHeight="44.0" prefWidth="193.0">
+                  <DatePicker fx:id="dtatualizarData" prefHeight="44.0" prefWidth="222.0">
                      <HBox.margin>
                         <Insets top="10.0" />
                      </HBox.margin>
                   </DatePicker>
                </children>
             </HBox>
-            <HBox prefHeight="103.0" prefWidth="198.0" />
          </children>
       </VBox>
    </children>
