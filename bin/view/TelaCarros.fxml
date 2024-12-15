@@ -51,11 +51,6 @@
       </VBox>
       <Pane layoutX="-61.0" layoutY="-14.0" prefHeight="501.0" prefWidth="387.0" style="-fx-background-color: #0c161f; -fx-background-radius: 100;">
          <children>
-            <Button fx:id="btnadmin" layoutX="159.0" layoutY="363.0" mnemonicParsing="false" onAction="#btnadminclick" style="-fx-background-color: #0c161f; -fx-background-radius: 50px; -fx-border-color: black; -fx-border-radius: 30;" text="Admin" textFill="WHITE">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="25.0" />
-               </font>
-            </Button>
             <ImageView fitHeight="259.0" fitWidth="268.0" layoutX="82.0" layoutY="93.0">
                <image>
                   <Image url="@../../img/Design_sem_nome_2.png" />

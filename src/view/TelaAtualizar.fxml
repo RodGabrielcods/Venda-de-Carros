@@ -32,7 +32,7 @@
             </ImageView>
          </children>
       </Pane>
-      <HBox layoutX="638.0" layoutY="222.0" prefHeight="66.0" prefWidth="461.0">
+      <HBox layoutX="644.0" layoutY="190.0" prefHeight="66.0" prefWidth="461.0">
          <children>
             <Label text="Marca:">
                <font>
@@ -52,7 +52,7 @@
             </TextField>
          </children>
       </HBox>
-      <HBox layoutX="638.0" layoutY="295.0" prefHeight="66.0" prefWidth="510.0">
+      <HBox layoutX="644.0" layoutY="263.0" prefHeight="66.0" prefWidth="510.0">
          <children>
             <Label text="Ano:">
                <font>
@@ -72,7 +72,7 @@
             </TextField>
          </children>
       </HBox>
-      <HBox layoutX="638.0" layoutY="361.0" prefHeight="66.0" prefWidth="467.0">
+      <HBox layoutX="644.0" layoutY="329.0" prefHeight="66.0" prefWidth="467.0">
          <children>
             <Label text="Placa:">
                <font>
@@ -92,7 +92,7 @@
             </TextField>
          </children>
       </HBox>
-      <HBox layoutX="638.0" layoutY="427.0" prefHeight="66.0" prefWidth="479.0">
+      <HBox layoutX="644.0" layoutY="395.0" prefHeight="66.0" prefWidth="479.0">
          <children>
             <Label text="Cor:">
                <font>
@@ -112,7 +112,7 @@
             </TextField>
          </children>
       </HBox>
-      <HBox layoutX="638.0" layoutY="493.0" prefHeight="66.0" prefWidth="527.0">
+      <HBox layoutX="644.0" layoutY="461.0" prefHeight="66.0" prefWidth="527.0">
          <children>
             <Label fx:id="tfatualizarModel" text="Model:">
                <font>
@@ -147,28 +147,5 @@
             <Font name="Arial Rounded MT Bold" size="37.0" />
          </font>
       </Button>
-      <HBox layoutX="630.0" layoutY="156.0" prefHeight="66.0" prefWidth="461.0">
-         <children>
-            <Label text="ID:">
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="51.0" />
-               </font>
-            </Label>
-            <TextField fx:id="tfAtualizarId" prefHeight="46.0" prefWidth="219.0">
-               <HBox.margin>
-                  <Insets bottom="10.0" left="119.0" top="10.0" />
-               </HBox.margin>
-               <padding>
-                  <Insets bottom="10.0" />
-               </padding>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-               <font>
-                  <Font name="Arial Rounded MT Bold" size="24.0" />
-               </font>
-            </TextField>
-         </children>
-      </HBox>
    </children>
 </AnchorPane>

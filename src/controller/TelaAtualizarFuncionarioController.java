@@ -54,7 +54,7 @@ public class TelaAtualizarFuncionarioController {
     }
 
     @FXML
-    void btnatualizarFunclick(ActionEvent event) {
+    void btnatualizarFunclick(ActionEvent event) throws IOException {
         Alert alertErro = new Alert(Alert.AlertType.WARNING);
 
         try {
@@ -115,8 +115,17 @@ public class TelaAtualizarFuncionarioController {
                 alert.setContentText("Funcionário atualizado com sucesso!");
                 alert.show();
 
-                Stage stage = (Stage) btnatualizarFun.getScene().getWindow();
-                stage.close();
+                URL url = getClass().getResource("/view/MenuAdmin.fxml");
+                Parent root = FXMLLoader.load(url);
+
+                Stage stgMenuAdmin = new Stage();
+                stgMenuAdmin.setTitle("Menu Admin");
+                stgMenuAdmin.setScene(new Scene(root));
+                stgMenuAdmin.setResizable(false);
+                stgMenuAdmin.show();
+
+                Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                telaAtual.close();
             } else {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setHeaderText("Erro");
