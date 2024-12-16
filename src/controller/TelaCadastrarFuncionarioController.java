@@ -92,12 +92,10 @@ public class TelaCadastrarFuncionarioController {
             }
 
             if (dtfun.getValue().isAfter(java.time.LocalDate.now())) {
-
                 alertErro.setHeaderText("Erro de Validação");
                 alertErro.setContentText("A data de nascimento não pode ser uma data futura.");
                 alertErro.show();
                 return;
-
             }
 
 

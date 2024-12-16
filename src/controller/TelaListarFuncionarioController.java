@@ -3,8 +3,10 @@ package controller;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
+import java.util.List;
 
 import dao.FuncionarioDao;
+import dao.UsuarioDao;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -21,6 +23,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import model.Funcionario;
+import model.Usuario;
 
 public class TelaListarFuncionarioController {
 
@@ -62,6 +65,20 @@ public class TelaListarFuncionarioController {
 
     ObservableList<Funcionario> obsFun;
 
+    ObservableList<String> obsUser = FXCollections.observableArrayList();
+
+    public void carregarDados() {
+        List<Funcionario> listaFuncionarios = FuncionarioDao.listar();
+        obsFun.clear();
+        obsUser.clear();
+
+        for (Funcionario funcionario : listaFuncionarios) {
+            obsFun.add(funcionario);
+            obsUser.add(funcionario.getCpf());
+        }
+        tbFuncionario.setItems(obsFun);
+    }
+
     @FXML
     private void initialize() {
         colCpf.setCellValueFactory(new PropertyValueFactory<>("cpf"));
@@ -72,7 +89,6 @@ public class TelaListarFuncionarioController {
         colTelefone.setCellValueFactory(new PropertyValueFactory<>("telefone"));
 
         obsFun = FXCollections.observableArrayList();
-
         tbFuncionario.setItems(obsFun);
     }
 
@@ -81,18 +97,20 @@ public class TelaListarFuncionarioController {
         Funcionario funcionarioSelecionado = tbFuncionario.getSelectionModel().getSelectedItem();
 
         if (funcionarioSelecionado != null) {
-            boolean sucesso = FuncionarioDao.excluir(funcionarioSelecionado.getIdFuncionario());
+            boolean sucessoFuncionario = FuncionarioDao.excluir(funcionarioSelecionado.getIdFuncionario());
+            boolean sucessoUsuario = UsuarioDao.excluir(funcionarioSelecionado.getCpf());
 
-            if (sucesso) {
+            if (sucessoFuncionario && sucessoUsuario) {
                 obsFun.remove(funcionarioSelecionado);
+                obsUser.remove(funcionarioSelecionado.getCpf());
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setHeaderText("Exclusão realizada");
-                alert.setContentText("Funcionário excluído com sucesso!");
+                alert.setContentText("Funcionário e usuário excluídos com sucesso!");
                 alert.show();
             } else {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setHeaderText("Erro");
-                alert.setContentText("Não foi possível excluir o funcionário.");
+                alert.setContentText("Não foi possível excluir o funcionário ou o usuário.");
                 alert.show();
             }
         } else {
@@ -101,7 +119,6 @@ public class TelaListarFuncionarioController {
             alert.setContentText("Selecione um funcionário para excluir.");
             alert.show();
         }
-
     }
 
     @FXML

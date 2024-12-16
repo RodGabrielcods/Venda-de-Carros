@@ -46,7 +46,7 @@ public class UsuarioDao {
 
     public static boolean verificarAdministrador() {
         String sql = "SELECT * FROM Usuario WHERE nome_usuario = 'admin' AND senha = 'admin'";
-        
+
         try (Connection con = ConexaoMySql.getConexao()) {
             PreparedStatement ps = con.prepareStatement(sql);
 
@@ -58,6 +58,17 @@ public class UsuarioDao {
         }
     }
 
-    
+    public static boolean excluir(String cpf) {
+        String sql = "DELETE FROM Usuario WHERE nome_usuario = ?";
+
+        try (Connection conn = ConexaoMySql.getConexao();
+                PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, cpf);
+            int linhasAfetadas = stmt.executeUpdate();
+            return linhasAfetadas > 0;
+        } catch (SQLException e) {
+            return false;
+        }
+    }
 
 }

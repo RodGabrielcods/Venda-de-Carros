@@ -127,17 +127,30 @@ public class TelaAtualizarController {
                 alert.setContentText("Veículo atualizado com sucesso!");
                 alert.show();
 
-                URL url = getClass().getResource("/view/MenuAdmin.fxml");
-                Parent root = FXMLLoader.load(url);
+                if (SessaoUsuario.getNomeUsuario().equals("admin")) {
+                    URL url = getClass().getResource("/view/MenuAdmin.fxml");
+                    Parent root = FXMLLoader.load(url);
 
-                Stage stgMenuAdmin = new Stage();
-                stgMenuAdmin.setTitle("Menu Admin");
-                stgMenuAdmin.setScene(new Scene(root));
-                stgMenuAdmin.setResizable(false);
-                stgMenuAdmin.show();
+                    Stage stgMenuAdmin = new Stage();
+                    stgMenuAdmin.setTitle("Menu Admin");
+                    stgMenuAdmin.setScene(new Scene(root));
+                    stgMenuAdmin.setResizable(false);
+                    stgMenuAdmin.show();
 
-                Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                telaAtual.close();
+                    Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                    telaAtual.close();
+                } else {
+                    URL url = getClass().getResource("/view/TelaMenu.fxml");
+                    Parent root = FXMLLoader.load(url);
+
+                    Stage stgMenu = new Stage();
+                    stgMenu.setTitle("Menu");
+                    stgMenu.setScene(new Scene(root));
+                    stgMenu.show();
+
+                    Stage telaAtual = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                    telaAtual.close();
+                }
             } else {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setHeaderText("Erro");
