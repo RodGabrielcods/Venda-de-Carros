@@ -33,17 +33,17 @@
 }
 
 .table-view {
-    -fx-background-color: #f0f0f0; /* Cor de fundo geral da tabela */
+    -fx-background-color: #f0f0f0; 
     -fx-background-radius: 10;
     -fx-border-radius: 10;
-    -fx-border-color: #d0d0d0; /* Cor da borda da tabela */
+    -fx-border-color: #d0d0d0; 
     -fx-border-width: 2;
     -fx-padding: 10;
     -fx-margin: 0;
 }
 
 .table-view .column-header-background {
-    -fx-background-color: #808080; /* Cor de fundo do cabeçalho */
+    -fx-background-color: #808080; 
     -fx-background-radius: 10 10 0 0;
     -fx-border-radius: 10 10 0 0;
     -fx-border-width: 0 0 2 0;
@@ -56,23 +56,23 @@
 }
 
 .table-view .table-column {
-    -fx-alignment: CENTER; /* Centraliza o texto nas colunas */
-    -fx-font-family: "Arial Rounded MT Bold"; /* Fonte do texto */
-    -fx-font-size: 20px; /* Tamanho da fonte */
-    -fx-text-fill: #000000; /* Cor da fonte */
+    -fx-alignment: CENTER; 
+    -fx-font-family: "Arial Rounded MT Bold"; 
+    -fx-font-size: 20px; 
+    -fx-text-fill: #000000; 
 }
 
 .table-row-cell {
-    -fx-font-family: "Arial Rounded MT Bold"; /* Fonte da tabela */
-    -fx-font-size: 13px; /* Tamanho da fonte das células */
-    -fx-background-color: #e0e0e0; /* Cor de fundo das linhas */
-    -fx-text-fill: #0c161f; /* Cor do texto */
+    -fx-font-family: "Arial Rounded MT Bold"; 
+    -fx-font-size: 13px; 
+    -fx-background-color: #e0e0e0; 
+    -fx-text-fill: #0c161f; 
     -fx-padding: 0 10 0 10;
 }
 
 .table-row-cell:selected {
-    -fx-background-color: #ff0000; /* Cor de fundo ao selecionar uma linha */
-    -fx-text-fill: white; /* Cor do texto ao selecionar */
+    -fx-background-color: #ff0000; 
+    -fx-text-fill: white; 
 }
 
 .table-row-cell:filled {

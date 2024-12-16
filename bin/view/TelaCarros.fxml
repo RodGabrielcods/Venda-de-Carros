@@ -14,7 +14,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="810.0" style="-fx-background-color: #dad8d8;" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaCarrosController">
    <children>
-      <VBox layoutX="487.0" layoutY="187.0" prefHeight="132.0" prefWidth="281.0" AnchorPane.bottomAnchor="166.0">
+      <VBox layoutX="452.0" layoutY="193.0" prefHeight="132.0" prefWidth="281.0" AnchorPane.bottomAnchor="150.0">
          <children>
             <TextField fx:id="tfuser" prefHeight="36.0" prefWidth="272.0" promptText="   User" style="-fx-border-style: solid; -fx-border-width: 2px; -fx-border-color: #0c161f; -fx-background-radius: 30; -fx-border-radius: 30;">
                <cursor>
@@ -51,29 +51,29 @@
       </VBox>
       <Pane layoutX="-61.0" layoutY="-14.0" prefHeight="501.0" prefWidth="387.0" style="-fx-background-color: #0c161f; -fx-background-radius: 100;">
          <children>
-            <ImageView fitHeight="259.0" fitWidth="268.0" layoutX="82.0" layoutY="93.0">
+            <ImageView fitHeight="259.0" fitWidth="268.0" layoutX="85.0" layoutY="121.0">
                <image>
                   <Image url="@../../img/Design_sem_nome_2.png" />
                </image>
             </ImageView>
          </children>
       </Pane>
-      <ImageView fitHeight="47.0" fitWidth="44.0" layoutX="440.0" layoutY="173.0">
+      <ImageView fitHeight="47.0" fitWidth="44.0" layoutX="405.0" layoutY="189.0">
          <image>
             <Image url="@../../img/pngegg%20.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="47.0" fitWidth="44.0" layoutX="440.0" layoutY="234.0">
+      <ImageView fitHeight="47.0" fitWidth="44.0" layoutX="405.0" layoutY="250.0">
          <image>
             <Image url="@../../img/pngegg%20(2).png" />
          </image>
       </ImageView>
-      <Label layoutX="519.0" layoutY="85.0" text=" Login" textFill="#111010" AnchorPane.leftAnchor="519.0" AnchorPane.rightAnchor="140.0">
+      <Label layoutX="484.0" layoutY="101.0" text=" Login" textFill="#111010" AnchorPane.leftAnchor="484.0" AnchorPane.rightAnchor="175.0">
          <font>
             <Font name="Arial Rounded MT Bold" size="51.0" />
          </font>
       </Label>
-      <Button fx:id="btnvai" layoutX="538.0" layoutY="344.0" mnemonicParsing="false" onAction="#btncadastrar" prefHeight="49.0" prefWidth="114.0" style="-fx-background-color: #0c161f; -fx-background-radius: 50px; -fx-border-color: black; -fx-border-radius: 30;" text="Enter" textFill="WHITE">
+      <Button fx:id="btnvai" layoutX="503.0" layoutY="360.0" mnemonicParsing="false" onAction="#btncadastrar" prefHeight="49.0" prefWidth="114.0" style="-fx-background-color: #0c161f; -fx-background-radius: 50px; -fx-border-color: black; -fx-border-radius: 30;" text="Enter" textFill="WHITE">
          <font>
             <Font name="Arial Rounded MT Bold" size="27.0" />
          </font>
